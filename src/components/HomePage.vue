@@ -51,14 +51,14 @@
             <a class="work-button" v-on:click="exp1 = !exp1; ">Office of Undergraduate Research at Purdue University</a>
             <div class="workexp" v-if="exp1">
             <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern at Office of Undergraduate Research at Purdue University</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.2em;"> 
+            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li> Conducting research projects and assisting in operations </li>
             </ul>
             </div>
             <a class="work-button" v-on:click="exp2 = !exp2; ">Prof. Tianyi Li Research Group</a>
             <div class="workexp" v-if="exp2">
             <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant - Prof. Tianyi Li Research Group</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.2em;"> 
+            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Control My News Feed: Exploring Users Manipulate Social Media Recommendation Systems</li>
                 <li>Researching social media addiction to build better recommender systems</li>
             </ul>
@@ -66,7 +66,7 @@
             <a class="work-button" v-on:click="exp3 = !exp3; ">INDESS Labs(Intelligent Decision Support Systems)</a>
             <div class="workexp" v-if="exp3">
             <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant - INDESS (Intelligent Decision Support Systems)</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.2em;"> 
+            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Investigating Explainability of Machine Learning Model Decisions for Injury Surveillance.</li>
                 <li>Worked in a team of 5 to build software utilizing Machine Learning Models for predicting injury narratives
                         in the workplace with 92% accuracy.</li>
@@ -78,7 +78,7 @@
             <a class="work-button" v-on:click="exp4 = !exp4; ">Discovery Park at Purdue University</a>
             <div class="workexp" v-if="exp4">
             <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern - Discovery Park at Purdue University</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.2em;"> 
+            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Text Mining and Classification of Injury Narratives.</li>
                 <li>Set up Data Pipelines using web scraping frameworks to create datasets of more than 50,000 data points
                         social media data from websites like Amazon, Reddit and Twitter related to product usage andreviews.</li>
@@ -90,7 +90,7 @@
             <a class="work-button" v-on:click="exp5 = !exp5; ">FarmBridge - AgTech Startup</a>
             <div class="workexp" v-if="exp5" >
             <h2 class="animate__animated animate__lightSpeedInLeft">Software Developer - FarmBridge - AgTech Startup</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.2em;"> 
+            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Built a Java Application working in a team of 6 to process 1GB of raw climate data to retrieve, organize and output climate reports used for preparing client pitches.</li>
                 <li>Packaged the application for both Windows and macOS systems which reduced 30 work hours per month.</li>
                 <li>Prepared data focused presentations with 20 clients resulting in a 90% success rate of securing funding</li>
@@ -391,6 +391,7 @@ li::marker {
     color: #112D4E;
     content: "";
 }
+
 
 .courses {
     color: #3F72AF;
