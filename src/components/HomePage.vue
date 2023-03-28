@@ -110,7 +110,7 @@
     <div class="sub-heading" v-if="mounted" id="research">
         <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Research <img src="https://img.icons8.com/color/96/null/brain.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;"></h1>
         <div class="research-show">
-            <a class="research-button">Control My News Feed: Exploring Users Manipulate Social Media Recommendation Systems</a>
+            <a class="research-button">Control My News Feed: Exploring How Users Manipulate Social Media Recommendation Systems</a>
             <div class="researchexp">
                 <h2>
                     Status: <span style="color: darkred;">In Progress</span>
@@ -237,92 +237,85 @@
     </div>
 
     <div class="sub-heading" v-if="mounted" id="skills">
-        <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Skills</h1>
+        <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E; margin-bottom: 25px;">Skills</h1>
         <div class="skill-box">
             <div class="tools">
-                <h2>
-                    Languages
-                </h2>
+                <h2 style="margin-bottom: 20px; font-size: 1.6em;"> Languages </h2>
                 <p>
-                    Python <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/python.png" alt="Python" style="width: 30px; height: 30px; translate: 0px 7px;"/> Python
                 </p>
                 <p>
-                    Java <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
-                </p>
-                <p>
-                    SQL <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
-                </p>
-                <p>
-                    JavaScript <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
-                </p>
-                <p>
-                    HTML <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
-                </p>
-                <p>
-                    CSS <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" style="width: 30px; height: 30px; translate: 0px 7px;"/> Java
                 </p>
                 
                 <p>
-                    C++ <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Coursework and Projects)
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="width: 30px; height: 30px; translate: 0px 7px;"/>  JavaScript
                 </p>
                 <p>
-                    C <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Coursework and Projects)
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" style="width: 30px; height: 30px; translate: 0px 7px;"/> HTML
                 </p>
                 <p>
-                    Shell Scripting <img src="https://img.icons8.com/color/48/000000/bash.png" alt="Shell Scripting" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Coursework and Projects)
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" style="width: 30px; height: 30px; translate: 0px 7px;"/> CSS
                 </p>
                 
-
-                    
-                    
-                    
+                <p>
+                    <img class="lang-icon" src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++" style="width: 30px; height: 30px; translate: 0px 7px;"/> C++
+                </p>
+                <p>
+                    <img class="lang-icon" src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" style="width: 30px; height: 30px; translate: 0px 7px;"/> C
+                </p>
+                <p>
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" style="width: 30px; height: 30px; translate: 0px 7px;"/> SQL
+                </p>
+                <p>
+                     <img class="lang-icon" src="https://img.icons8.com/color/48/000000/bash.png" alt="Shell Scripting" style="width: 30px; height: 30px; translate: 0px 7px;"/> Shell Scripting
+                </p>
                     
             </div>
+            
             <div class="tools">
-                <h2>
-                    Frameworks
-                </h2>
+                <h2 style="margin-bottom: 20px; font-size: 1.6em;"> Frameworks </h2>
                 <p>
-                    TensorFlow <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" style="width: 30px; height: 30px; translate: 0px 7px;"/> TensorFlow
                 </p>
                 <p>
-                    Keras <img src="https://img.icons8.com/color/48/000000/keras.png" alt="Keras" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/k.png" alt="Keras" style="width: 30px; height: 30px; translate: 0px 7px;"/> Keras
                 </p>
                 <p>
-                    PyTorch <img src="https://img.icons8.com/color/48/000000/pytorch.png" alt="PyTorch" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="4bqos6r005.png" alt="PyTorch" style="width: 30px; height: 30px; translate: 0px 7px;"/> PyTorch
                 </p>
                 <p>
-                    Selenium <img src="https://img.icons8.com/color/48/000000/selenium-test-automation.png" alt="Selenium" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="scikit.png" alt="Scikit-Learn" style="width: 50px; height: 30px; translate: 0px 7px;"/> Scikit-Learn
                 </p>
                 <p>
-                    BeautifulSoup <img src="https://img.icons8.com/color/48/000000/beautifulsoup.png" alt="BeautifulSoup" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="https://img.icons8.com/color/48/000000/selenium-test-automation.png" alt="Selenium" style="width: 30px; height: 30px; translate: 0px 7px;"/> Selenium
                 </p>
                 <p>
-                    pandas <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="pandas" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="goopsm.jpg" alt="BeautifulSoup" style="width: 40px; height: 30px; translate: 0px 7px; object-fit: cover; object-position: 0px -25px;"/> BeautifulSoup
                 </p>
                 <p>
-                    NumPy <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                   <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="pandas" style="width: 30px; height: 30px; translate: 0px 7px;"/> pandas
                 </p>
                 <p>
-                    Matplotlib <img src="https://img.icons8.com/color/48/000000/matplotlib.png" alt="Matplotlib" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" style="width: 30px; height: 30px; translate: 0px 7px;"/> NumPy
                 </p>
                 <p>
-                    Scikit-Learn <img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Scikit-Learn" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="matplotlib.png" alt="Matplotlib" style="width: 30px; height: 30px; translate: 0px 7px;"/> Matplotlib
                 </p>
                 <p>
-                    SciPy <img src="https://img.icons8.com/color/48/000000/scipy.png" alt="SciPy" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Working Experience)
+                    <img src="scipy.jpeg" alt="SciPy" style="width: 30px; height: 30px; translate: 0px 7px;"/> SciPy
                 </p>
                 <p>
-                    Vue.js <img src="https://img.icons8.com/color/48/000000/vue-js.png" alt="Vue.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
+                    <img src="https://img.icons8.com/color/48/000000/vue-js.png" alt="Vue.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> Vue.js
                 </p>
                 <p>
-                    Node.js <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
+                    <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> Node.js
                 </p>
                 <p>
-                    Express.js <img src="https://img.icons8.com/color/48/000000/express.png" alt="Express.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
+                    <img src="https://img.icons8.com/color/48/000000/express.png" alt="Express.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> Express.js
                 </p>
                 <p>
-                    MongoDB <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" style="width: 30px; height: 30px; translate: 0px 7px;"/> (Projects)
+                    <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" style="width: 30px; height: 30px; translate: 0px 7px;"/> MongoDB
                 </p>
             </div>
         </div>
@@ -390,6 +383,13 @@ export default {
     /* border: 1px solid #e9e9e9; */
     animation: slideInLeft 1s ease-in-out;
     margin-left: 50px;
+
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .navigation {
@@ -400,8 +400,11 @@ export default {
     align-items: center;
     color: #112D4E;
     animation: slideInRight 1s ease-in-out;
+
     @media (min-width: 600px) {
         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
     /*border: 1px solid #e9e9e9; */
 }
@@ -423,9 +426,9 @@ export default {
     align-items: center;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
-    /* border: 1px solid #e9e9e9; */
-    margin-left: 10%;
-    margin-right: 10%;
+    /* border: 1px solid #000000;  */
+    margin-left: 5%;
+    margin-right: 5%;
     transition: opacity 1s ease-in-out;
     
 }
@@ -435,7 +438,6 @@ export default {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 30px;
-    
 }
 h3 {
     margin: 0;
@@ -575,7 +577,7 @@ li::marker {
 
 .work-button {
     background-color: #3F72AF;
-    color: #DBE2EF;
+    color: #fcfdfd;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -596,6 +598,9 @@ li::marker {
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
 }
+
+
+
 .workexp {
     text-align: left;
     text-decoration: none;
@@ -700,23 +705,37 @@ li::marker {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: baseline;
+    /* border: 1px solid #171616; */
     width: 100%;
 }
 
 .tools {
+    font-size: 1.5em;
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 20px;
-    border: 1px solid black;
+    justify-self: flex-start;
+    align-self: flex-start;
+    /* border: 1px solid black; */
     width: 100%;
     border-radius: 5px;
 }
 
-
-
+.lang-icon {
+    width: 150px;
+    height: 150px;
+}
+.language-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+}
 .slideInLeft {
   animation-name: slideInLeft;
 }
