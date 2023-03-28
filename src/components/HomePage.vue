@@ -8,9 +8,9 @@
     </div>
     <div class="greeting" v-if="mounted">
         <h1 class="animate__animated animate__rollIn animate__delay-0.5s">Hi, I'm <span class="name">Harmya Bhatt</span></h1>
-        <h2>Computer Science and Mathematics at <img src="../assets/uni_logo.svg" alt="uni logo" style="height: 35px; margin-left: 5px;"> <span class="uni">urdue University</span></h2>
+        <h2>Computer Science and Mathematics at <img src="uni_logo.svg" alt="uni logo" style="height: 35px; margin-left: 5px;"> <span class="uni">urdue University</span></h2>
         <h2> Research  in  <span class="job">Natural Language Processing, Explainable AI and Recommender Systems</span></h2>
-        <img src="../assets/cute.jpg" alt="Website" class="my-pic">
+        <img src="cute.jpg" alt="Website" class="my-pic">
     </div>
     <div class="navigation" v-if="mounted">
         <a class="nav-button" v-on:click="scrollToSummary">Summary</a>
@@ -137,7 +137,7 @@
                 <h2 style="align-self: center;">
                     <a class="example-toggle" v-on:click="showexample1 = !showexample1">View Snippet of a local LIME explanation for an Arbritary Narrative </a>
                 </h2>
-                <img src="../assets/explain.png" alt="Demo" class="explain-demo animate__animated animate__flipInX" v-if="showexample1">
+                <img src="explain.png" alt="Demo" class="explain-demo animate__animated animate__flipInX" v-if="showexample1">
                 
             </div>
             <a class="research-button">Text Mining and Classification of Injury Narratives</a>
@@ -154,7 +154,7 @@
                 <h2 style="align-self: center;">
                     <a class="example-toggle" v-on:click="showexample2 = !showexample2">View Result of Analysis of injured body parts for Skateboard Injury Narratives</a>
                 </h2>
-                <img src="../assets/r1.png" alt="Demo" v-if="showexample2" class="classification-demo animate__animated animate__flipInX" >
+                <img src="r1.png" alt="Demo" v-if="showexample2" class="classification-demo animate__animated animate__flipInX" >
                 
             </div>
         </div>
