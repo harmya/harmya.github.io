@@ -373,6 +373,9 @@ export default {
 </script>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
 .greeting {
     display: flex;
     flex-direction: column;
