@@ -508,6 +508,20 @@ h2 {
     /* border: white 1px solid; */
 }
 
+@media screen and (max-width: 480px) {
+    
+    h2 {
+        font-size: small;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+}
+    
+
+
 
 .name {
     color: #112D4E;
@@ -756,6 +770,12 @@ li::marker {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .example-toggle {
+        font-size: medium;
+    }
 }
 
 .example-toggle:hover {
