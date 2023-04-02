@@ -215,7 +215,12 @@ li::marker {
     font-weight: 800;
     text-align: left;
 }
-
+.project-title {
+    color: #112D4E;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+}
 .project-list {
     align-self: flex-start;
     color: #3F72AF;

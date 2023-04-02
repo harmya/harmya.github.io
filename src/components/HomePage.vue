@@ -47,10 +47,10 @@
             Personal Projects <img src="https://img.icons8.com/doodle/48/null/goal.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;" >    
         </h3>
         <ul class="project-list">
-            <li> RateMyResume: A resume reviewer make with Vue.js, MongoDB, Node.js and Express.js</li>
-            <li> Productive: A productivity tool made with Vue.js, MongoDB, Node.js and Express.js (Hackathon Project)</li>
-            <li> Natural Selection: A vizualizer for genetic algorithms made with JavaScript, HTML and CSS</li>
-            <li> Epidemic Simulation: Mathematical Modelling of an epidemic simulated in Python using Tkinter</li>
+            <li> <span class="project-title">RateMyResume:</span> A resume reviewer make with Vue.js, MongoDB, Node.js and Express.js</li>
+            <li> <span class="project-title">Productive:</span> A productivity tool made with Vue.js, MongoDB, Node.js and Express.js (Hackathon Project)</li>
+            <li> <span class="project-title">NaturalSelection:</span> A vizualizer for genetic algorithms made with JavaScript, HTML and CSS</li>
+            <li> <span class="project-title">EpidemicSimulation:</span> Mathematical Modelling of an epidemic simulated in Python using Tkinter</li>
         </ul>
     </div>
 
