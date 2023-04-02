@@ -4,7 +4,7 @@
         <a href="https://www.github.com/harmya" target="_blank"><img src="https://img.icons8.com/doodle/48/null/github.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="Resume_2023_Latest.pdf" download="harmya_bhatt_resume" target="_blank"><img src="https://img.icons8.com/3x/000000/resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="mailto: hvbhatt@purdue.edu"><img src="https://img.icons8.com/doodle/48/null/email.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="https://harmya.github.io/"><img src="https://img.icons8.com/doodle/48/null/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="https://img.icons8.com/doodle/48/null/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
     </div>
     <div class="greeting" v-if="mounted">
         <div class="left-greeting">
@@ -846,6 +846,8 @@ li::marker {
     font-size: 1.4em;
     font-weight: 600;
     border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 .footer-text {
     background-color: transparent;
@@ -862,6 +864,9 @@ li::marker {
     width: fit-content;
     margin-left: 2%;
     margin-bottom: 2%;
+    animation: fadeIn 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    
 }
 
 .go-to-top:hover {
@@ -912,10 +917,6 @@ li::marker {
     opacity: 1;
   }
 }
-
-
-
-
 
 
 </style>
