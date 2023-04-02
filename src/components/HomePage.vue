@@ -1,5 +1,5 @@
 <template>
-    <div class="links-to animate__animated animate__fadeInRight animate__delay-0.5s" v-if="mounted">
+    <div class="links-to animate__animated animate__fadeInRight animate__delay-0.2s" v-if="mounted">
         <a href="https://www.linkedin.com/in/harmyacs/" target="_blank"><img src="https://img.icons8.com/doodle/48/null/linkedin.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="https://www.github.com/harmya" target="_blank"><img src="https://img.icons8.com/doodle/48/null/github.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="Resume_2023_Latest.pdf" download="harmya_bhatt_resume" target="_blank"><img src="https://img.icons8.com/3x/000000/resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
@@ -7,10 +7,14 @@
         <a href="https://harmya.github.io/"><img src="https://img.icons8.com/doodle/48/null/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
     </div>
     <div class="greeting" v-if="mounted">
-        <h1 class="animate__animated animate__rollIn animate__delay-0.5s">Hi, I'm <span class="name">Harmya Bhatt</span></h1>
+        <div class="left-greeting">
+        <h1 class="animate__animated animate__slideInLeft animate__delay-0.2s">Hi, I'm <span class="name">Harmya Bhatt</span></h1>
         <h2>Computer Science and Mathematics at <img src="uni_logo.svg" alt="uni logo" style="height: 35px; margin-left: 5px;"> <span class="uni">urdue University</span></h2>
         <h2> Research  in  <span class="job">Natural Language Processing, Explainable AI and Recommender Systems</span></h2>
-        <img src="cute.jpg" alt="Website" class="my-pic">
+        </div>
+        <div class="right-greeting">
+            <img src="cute.jpg" class="my-pic" alt="my pic">
+        </div>
     </div>
     <div class="navigation" v-if="mounted">
         <a class="nav-button" v-on:click="scrollToSummary">Summary</a>
@@ -18,7 +22,6 @@
         <a class="nav-button" v-on:click="scrollToResearch">Research</a>
         <a class="nav-button" v-on:click="scrollToPP">Personal Projects</a>
         <a class="nav-button" v-on:click="scrollToSkills">Skills</a>
-
     </div>
 
     <div class="sub-heading" v-if="mounted" id="summary">
@@ -376,40 +379,86 @@ export default {
 html {
     scroll-behavior: smooth;
 }
+
 .greeting {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     color: #112D4E;
-    /* border: 1px solid #e9e9e9; */
     animation: slideInLeft 1s ease-in-out;
     margin-left: 50px;
+    height: fit-content;
 
-    @media (min-width: 600px) {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-    }
 }
 
+.left-greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: flex-start;
+    color: #112D4E;
+    animation: slideInLeft 1s ease-in-out;
+    height: fit-content;
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .greeting {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        text-align: center;
+        font-size: small;
+        text-decoration: none;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .left-greeting {
+        margin-bottom: 50px;
+        font-size: smaller;
+    }
+
+}
+
+
 .navigation {
+    
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     color: #112D4E;
-    animation: slideInRight 1s ease-in-out;
 
-    @media (min-width: 600px) {
+    animation: slideInRight 1s ease-in-out;
+    height: 50px;
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .navigation {
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: stretch;
+        gap: 10px;
         align-items: center;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: fit-content;
+        font-size: small;
+
     }
-    /*border: 1px solid #e9e9e9; */
+
+    .sub-heading {
+        font-size: smaller;
+    }
+
 }
 
 .icon {
@@ -433,7 +482,6 @@ html {
     margin-left: 5%;
     margin-right: 5%;
     transition: opacity 1s ease-in-out;
-    
 }
 .links-to {
     display: flex;
@@ -483,16 +531,15 @@ h2 {
   font-size:18px;
   font-weight: 600;
   line-height: 45px;
-  margin: 0 0 2em;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-
   @media(min-width: 600px) {
     width: auto;
   }
 }
+
 li::marker {
     color: #112D4E;
     content: "";
@@ -554,17 +601,27 @@ li::marker {
 }
 
 .my-pic {
-    align-self: flex-end;
-    margin-top: -200px;
     width: 250px;
     height: 250px;
     margin-right: 50px;
     object-fit: cover;
-    object-position: 90% 40%;
+    object-position: 10% 10%;
     border: transparent;
     border-radius: 50%;
-    box-shadow: 0 0 50px 15px #DBE2EF;
 }
+
+@media screen and (max-width: 480px) {
+    .my-pic {
+        width: 200px;
+        height: 200px;
+        margin-right: 0px;
+        object-fit: cover;
+        object-position: 90% 40%;
+        border: transparent;
+        border-radius: 50%;
+    }
+}
+
 
 .work-button-group {
     display: flex;
@@ -694,6 +751,11 @@ li::marker {
     background-color: lightblue;
     padding: 5px 20px;
     border-radius: 5px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .example-toggle:hover {
