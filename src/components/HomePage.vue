@@ -330,7 +330,7 @@
     </a>
     <div class="footer">  
         <span class="footer-text">Made with <img src="https://img.icons8.com/doodle/48/null/hearts--v1.png" alt="love" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" /> and 
-            <img src="https://img.icons8.com/color/96/null/vue-js.png" alt="Vue.js" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" /> by Harmya</span>
+            <img src="https://img.icons8.com/color/96/null/vue-js.png" alt="Vue.js" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" /></span>
     </div>
 
 
