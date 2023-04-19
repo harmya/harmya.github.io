@@ -46,27 +46,31 @@
         <h3>
             Personal Projects <img src="https://img.icons8.com/doodle/48/null/goal.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;" >    
         </h3>
+
         <ul class="project-list">
+            
+            <li> <span class="project-title">Self-Driving Car:</span> Using nerual networks to learn how to drive through traffic made using synaptic.js, JavaScript, HTML and CSS</li>
+            <li> <span class="project-title">Neural Networks from Scratch:</span> A neural network made from scratch using only numpy and math</li>
             <li> <span class="project-title">RateMyResume:</span> A resume reviewer make with Vue.js, MongoDB, Node.js and Express.js</li>
             <li> <span class="project-title">Productive:</span> A productivity tool made with Vue.js, MongoDB, Node.js and Express.js (Hackathon Project)</li>
             <li> <span class="project-title">NaturalSelection:</span> A vizualizer for genetic algorithms made with JavaScript, HTML and CSS</li>
             <li> <span class="project-title">EpidemicSimulation:</span> Mathematical Modelling of an epidemic simulated in Python using Tkinter</li>
         </ul>
     </div>
-
+    
     <div class="sub-heading" v-if="mounted" id="exp">
         <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Work Experience <img src="https://img.icons8.com/color/96/null/hard-working.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;" ></h1>
         <div class="work-button-group">
             <a class="work-button" v-on:click="exp1 = !exp1; ">Office of Undergraduate Research at Purdue University</a>
             <div class="workexp" v-if="exp1">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern at Office of Undergraduate Research at Purdue University</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li> Conducting research projects and assisting in operations </li>
             </ul>
             </div>
             <a class="work-button" v-on:click="exp2 = !exp2; ">Prof. Tianyi Li Research Group</a>
             <div class="workexp" v-if="exp2">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant - Prof. Tianyi Li Research Group</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Control My News Feed: Exploring Users Manipulate Social Media Recommendation Systems</li>
                 <li>Researching social media addiction to build better recommender systems</li>
@@ -74,7 +78,7 @@
             </div>
             <a class="work-button" v-on:click="exp3 = !exp3; ">INDESS Labs(Intelligent Decision Support Systems)</a>
             <div class="workexp" v-if="exp3">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant - INDESS (Intelligent Decision Support Systems)</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Investigating Explainability of Machine Learning Model Decisions for Injury Surveillance.</li>
                 <li>Worked in a team of 5 to build software utilizing Machine Learning Models for predicting injury narratives
@@ -86,7 +90,7 @@
             </div>
             <a class="work-button" v-on:click="exp4 = !exp4; ">Discovery Park at Purdue University</a>
             <div class="workexp" v-if="exp4">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern - Discovery Park at Purdue University</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Project: Text Mining and Classification of Injury Narratives.</li>
                 <li>Set up Data Pipelines using web scraping frameworks to create datasets of more than 50,000 data points
@@ -98,7 +102,7 @@
             </div>
             <a class="work-button" v-on:click="exp5 = !exp5; ">FarmBridge - AgTech Startup</a>
             <div class="workexp" v-if="exp5" >
-            <h2 class="animate__animated animate__lightSpeedInLeft">Software Developer - FarmBridge - AgTech Startup</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Software Engineering Intern</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
                 <li>Built a Java Application working in a team of 6 to process 1GB of raw climate data to retrieve, organize and output climate reports used for preparing client pitches.</li>
                 <li>Packaged the application for both Windows and macOS systems which reduced 30 work hours per month.</li>
@@ -166,6 +170,42 @@
     <div class="sub-heading" v-if="mounted" id="pp">
         <div class="projects-show">
         <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Personal Projects <img src="https://img.icons8.com/color/96/null/active-directory.png" alt="pp" style="width: 40px; heigh: 50px; translate: 0px 7px;"/> </h1>
+
+        <a class="research-button">Self-Driving Car</a>
+            <div class="researchexp">
+                <h2>
+                    Status: <span style="color: goldenrod">In Progress</span>
+                </h2>
+                <p class="research-description">
+                   This project aims to train a self-driving car using evolutionary training of neural neworks. On a simulated track, the car will be able to drive itself without any human intervention and navigate through traffic. 
+                   Built using the synaptic.js library, JavaScript <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="width: 30px; height: 30px; translate: 0px 7px;"/>, 
+                   HTML <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" style="width: 30px; height: 30px; translate: 0px 7px;"/>,
+                   and CSS <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                </p>
+                <a class="project-link" href="https://github.com/harmya/SelfDrivingCar" target="_blank">
+                    View the project on GitHub<img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                </a>
+        </div>
+
+        <a class="research-button">Neural Network from Scratch</a>
+            <div class="researchexp">
+                <h2>
+                    Status: <span style="color: goldenrod">In Progress</span>
+                </h2>
+                <p class="research-description">
+                   This project aims to build a neural network from scratch using only numpy and math. The neural network will be able to classify handwritten digits from the MNIST dataset.
+                     Built using Python <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" style="width: 30px; height: 30px; translate: 0px 7px;"/>,
+                        numpy <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="numpy" style="width: 30px; height: 30px; translate: 0px 7px;"/>,
+                        and math <img src="https://img.icons8.com/external-goofy-solid-kerismaker/96/null/external-Math-education-goofy-solid-kerismaker.png" alt="math" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                </p>
+                <a class="project-link" href="https://github.com/harmya/NeuralNetworkFromScratch" target="_blank">
+                    View the project on GitHub<img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                </a>
+        </div>
+
+        
+            
+
         <a class="research-button">RateMyResume</a>
             <div class="researchexp">
                 <h2>
@@ -179,7 +219,7 @@
                    Node.js <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> 
                 </p>
                 <a class="project-link" href="https://github.com/harmya/resumereviewer" target="_blank">
-                    View the project <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                    View the project on GitHub <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
                 </a>
             </div>
         <a class="research-button">Productive (Hackathon Project)</a>
@@ -196,7 +236,7 @@
                     Node.js <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> 
                 </p>
                 <a class="project-link" href="https://github.com/harmya/productive" target="_blank">
-                    View the project <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                    View the project on GitHub <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
                 </a>
             </div>
         <a class="research-button">To-Do List Web App</a>
@@ -208,7 +248,7 @@
                     A simple web application that allows users to create a to-do list. This is my first application when I was learning JavaScript Frameworks. Built using <img src="https://img.icons8.com/color/48/000000/vue-js.png" alt="Vue.js" style="width: 30px; height: 30px; translate: 0px 7px;"/> Vue.js
                 </p>
                 <a class="project-link" href="https://github.com/harmya/todolist" target="_blank">
-                    View the project <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                    View the project on GitHub <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
                 </a>
             </div>
         <a class="research-button">Epidemic Simulation</a>
@@ -220,7 +260,7 @@
                     Mathematical Vizualization of the SIR Model of Epidemic Spread. Built using <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" style="width: 30px; height: 30px; translate: 0px 7px;"/> Python's tkinter library
                 </p>
                 <a class="project-link" href="https://github.com/harmya/EpidemicSimulation" target="_blank">
-                    View the project <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                    View the project on GitHub <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
                 </a>
             </div>
         <a class="research-button">Natural Selection</a>
@@ -232,7 +272,7 @@
                     A simulation of natural selection and genetic algorithms. Built using <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="width: 30px; height: 30px; translate: 0px 7px;"/> JavaScript, <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" style="width: 30px; height: 30px; translate: 0px 7px;"/> HTML and <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" style="width: 30px; height: 30px; translate: 0px 7px;"/> CSS
                 </p>
                 <a class="project-link" href="https://github.com/harmya/NaturalSelection" target="_blank">
-                    View the project <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
+                    View the project on GitHub <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" style="width: 30px; height: 30px; translate: 0px 7px;"/>
                 </a>
             </div>
         </div>
@@ -352,6 +392,7 @@ export default {
             exp5: false,
             showexample1: false,
             showexample2: false,
+            showdemo: false,
         }
     },
     methods: {

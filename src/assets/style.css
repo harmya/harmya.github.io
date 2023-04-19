@@ -2,6 +2,37 @@ html {
     scroll-behavior: smooth;
 }
 
+  
+  #title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: -60px;
+    padding-left: 10px;
+  }
+  #title span {
+    background: -webkit-linear-gradient(white, #38495a);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+
 .greeting {
     display: flex;
     flex-direction: row;
@@ -498,6 +529,53 @@ li::marker {
 .slideInRight {
   animation-name: slideInRight;
 }
+
+
+.project-demo-button {
+    border-radius: 4px;
+    background-color: lightblue;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  
+  .project-demo-button span {
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  
+  .project-demo-button span:after {
+    content: '⚘';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .project-demo-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .project-demo-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .car-demo {
+    margin-top: 50px;
+    animation: fadeIn 2s ease-in-out;
+    align-self: center;
+  }
 
 
 @keyframes slideInLeft {

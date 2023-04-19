@@ -15,7 +15,7 @@ export default {
 
 <style>
 * {
-  background-color: #F9F7F7;
+  background-color: #F9F7F7; 
 }
 
 #app {
@@ -38,7 +38,5 @@ export default {
     transform: translateX(0);
   }
 }
-
-
 
 </style>
