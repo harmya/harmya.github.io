@@ -49,7 +49,7 @@
 
         <ul class="project-list">
             
-            <li> <span class="project-title">Self-Driving Car:</span> Using nerual networks to learn how to drive through traffic made using synaptic.js, JavaScript, HTML and CSS</li>
+            <li> <span class="project-title">Self-Driving Car:</span> Using neural networks to learn how to drive through traffic made using synaptic.js, JavaScript, HTML and CSS</li>
             <li> <span class="project-title">Neural Networks from Scratch:</span> A neural network made from scratch using only numpy and math</li>
             <li> <span class="project-title">RateMyResume:</span> A resume reviewer make with Vue.js, MongoDB, Node.js and Express.js</li>
             <li> <span class="project-title">Productive:</span> A productivity tool made with Vue.js, MongoDB, Node.js and Express.js (Hackathon Project)</li>
