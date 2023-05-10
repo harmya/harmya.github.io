@@ -2,7 +2,7 @@
     <div class="links-to animate__animated animate__fadeInRight animate__delay-0.2s" v-if="mounted">
         <a href="https://www.linkedin.com/in/harmyacs/" target="_blank"><img src="https://img.icons8.com/doodle/48/null/linkedin.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="https://www.github.com/harmya" target="_blank"><img src="https://img.icons8.com/doodle/48/null/github.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="Resume_2023_Latest.pdf" download="harmya_bhatt_resume" target="_blank"><img src="https://img.icons8.com/3x/000000/resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="Resume_2023_SWE.pdf" download="harmya_bhatt_resume" target="_blank"><img src="https://img.icons8.com/3x/000000/resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="mailto: hvbhatt@purdue.edu"><img src="https://img.icons8.com/doodle/48/null/email.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="https://img.icons8.com/doodle/48/null/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
     </div>
@@ -13,7 +13,7 @@
         <h2> Research  in  <span class="job">Natural Language Processing, Explainable AI and Recommender Systems</span></h2>
         </div>
         <div class="right-greeting">
-            <img src="cute.jpg" class="my-pic" alt="my pic">
+            <img src="my.jpg" class="my-pic" alt="my pic">
         </div>
     </div>
     <div class="navigation" v-if="mounted">
@@ -30,7 +30,7 @@
             Courses <img src="https://img.icons8.com/doodle/48/null/read.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;">
         </h3>
         <p class="courses">
-            Advanced Topics in Algorithms (Upcoming), Artificial Intelligence (Upcoming), Systems Programming,
+            Advanced Topics in Algorithms, Artificial Intelligence, Systems Programming,
             Data Structures and Algorithms, Computer Architecture, Competitive Programming, Discrete Mathematics, Programming in C and Problem Solving and Object-Oriented Programming.
         </p>
         <h3>
@@ -41,7 +41,7 @@
             <li> <span class="work-title">Research Assistant</span> at <a class="work-place" href="https://tl-tianyi-li.github.io/#portfolio" target="_blank">Prof. Tianyi Li Research Group</a>  </li>
             <li> <span class="work-title">Research Assistant</span> at <a class="work-place" href="https://web.ics.purdue.edu/~gnanda/RGroup.html" target="_blank">INDESS Labs (Intelligent Decision Support Systems)</a></li>
             <li> <span class="work-title">Research Intern</span> at <a class="work-place" href="https://www.discoveryparkdistrict.com/" target="_blank">Discovery Park at Purdue University</a></li>
-            <li> <span class="work-title">Software Engineering Intern</span> at <a class="work-place" href="http://farmbridge01.weebly.com/our-reach-and-projects.html" target="_blank">FarmBridge AgTech Startup</a></li>
+            <li> <span class="work-title">Software Engineering Intern</span> at <a class="work-place" href="http://farmbridge01.weebly.com/our-reach-and-projects.html" target="_blank">FarmBridge</a></li>
         </ul>
         <h3>
             Personal Projects <img src="https://img.icons8.com/doodle/48/null/goal.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;" >    

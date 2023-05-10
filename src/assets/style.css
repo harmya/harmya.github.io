@@ -274,12 +274,12 @@ li::marker {
 
 .my-pic {
     width: 250px;
-    height: 250px;
+    height: 300px;
     margin-right: 50px;
     object-fit: cover;
-    object-position: 10% 10%;
+    object-position: 4% 29%;
     border: transparent;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 @media screen and (max-width: 480px) {
