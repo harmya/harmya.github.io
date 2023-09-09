@@ -1,121 +1,102 @@
 <template>
     <div class="links-to animate__animated animate__fadeInRight animate__delay-0.2s" v-if="mounted">
-        <a href="https://www.linkedin.com/in/harmyacs/" target="_blank"><img src="https://img.icons8.com/doodle/48/null/linkedin.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="https://www.github.com/harmya" target="_blank"><img src="https://img.icons8.com/doodle/48/null/github.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="Resume_2023_SWE.pdf" download="harmya_bhatt_resume" target="_blank"><img src="https://img.icons8.com/3x/000000/resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="mailto: hvbhatt@purdue.edu"><img src="https://img.icons8.com/doodle/48/null/email.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="https://img.icons8.com/doodle/48/null/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="https://www.linkedin.com/in/harmyacs/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="https://www.github.com/harmya" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/github.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="Resume_2023_SWE.pdf" download="harmya_bhatt_resume" target="_blank"><img src="resume.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="mailto: hvbhatt@purdue.edu"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/new-post.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/home.png" alt="Website" width="50" height="50" text-decoration="None" style="translate: 0px 6px;"></a>
     </div>
     <div class="greeting" v-if="mounted">
-        <div class="left-greeting">
         <h1 class="animate__animated animate__slideInLeft animate__delay-0.2s">Hi, I'm <span class="name">Harmya Bhatt</span></h1>
         <h2>Computer Science and Mathematics at <img src="uni_logo.svg" alt="uni logo" style="height: 35px; margin-left: 5px;"> <span class="uni">urdue University</span></h2>
-        <h2> Research  in  <span class="job">Natural Language Processing, Explainable AI and Recommender Systems</span></h2>
-        </div>
-        <div class="right-greeting">
-            <img src="my.jpg" class="my-pic" alt="my pic">
-        </div>
+        <h2>Research in <span class="job">Natural Language Processing and Explainable AI</span></h2>
     </div>
     <div class="navigation" v-if="mounted">
-        <a class="nav-button" v-on:click="scrollToSummary">Summary</a>
-        <a class="nav-button" v-on:click="scrollToExp">Work Experience</a>
-        <a class="nav-button" v-on:click="scrollToResearch">Research</a>
-        <a class="nav-button" v-on:click="scrollToPP">Personal Projects</a>
+        <a class="nav-button" v-on:click="scrollToSummary">About Me</a>
+        <a class="nav-button" v-on:click="scrollToExp">Experience</a>
+        <a class="nav-button" v-on:click="scrollToPP">Projects</a>
         <a class="nav-button" v-on:click="scrollToSkills">Skills</a>
     </div>
 
+    <!-- jgn -->
+
     <div class="sub-heading" v-if="mounted" id="summary">
-        <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Summary</h1>
+        <h1 style="font-size: 3em; border-bottom: 1px solid #61677A;">About Me</h1>
+        <p class="courses">
+            I am a junior at Purdue University majoring in Computer Science and Mathematics. I like AI and Math.
+        </p>
+
         <h3>
             Courses <img src="https://img.icons8.com/doodle/48/null/read.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;">
         </h3>
         <p class="courses">
-            Advanced Topics in Algorithms, Artificial Intelligence, Systems Programming,
-            Data Structures and Algorithms, Computer Architecture, Competitive Programming, Discrete Mathematics, Programming in C and Problem Solving and Object-Oriented Programming.
+            Advanced Topics in Algorithms, Theory of Artificial Intelligence, Systems Programming,
+            Data Structures and Algorithms, Computer Architecture, Competitive Programming, Discrete Mathematics, Programming in C and  and Object-Oriented Programming.
         </p>
-        <h3>
-            Work Experience <img src="https://img.icons8.com/doodle/48/null/laptop--v1.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;"> 
-        </h3>
-        <ul class="workexp-list">
-            <li> <span class="work-title">Research Intern</span> at <a class="work-place" href="https://www.purdue.edu/undergrad-research/index.php" target="_blank">Office of Undergraduate Research at Purdue University</a></li>
-            <li> <span class="work-title">Research Assistant</span> at <a class="work-place" href="https://tl-tianyi-li.github.io/#portfolio" target="_blank">Prof. Tianyi Li Research Group</a>  </li>
-            <li> <span class="work-title">Research Assistant</span> at <a class="work-place" href="https://web.ics.purdue.edu/~gnanda/RGroup.html" target="_blank">INDESS Labs (Intelligent Decision Support Systems)</a></li>
-            <li> <span class="work-title">Research Intern</span> at <a class="work-place" href="https://www.discoveryparkdistrict.com/" target="_blank">Discovery Park at Purdue University</a></li>
-            <li> <span class="work-title">Software Engineering Intern</span> at <a class="work-place" href="http://farmbridge01.weebly.com/our-reach-and-projects.html" target="_blank">FarmBridge</a></li>
-        </ul>
-        <h3>
-            Personal Projects <img src="https://img.icons8.com/doodle/48/null/goal.png" alt="Website" width="30" height="30" text-decoration="None" style="translate: 0px 6px;" >    
-        </h3>
-
-        <ul class="project-list">
-            
-            <li> <span class="project-title">Self-Driving Car:</span> Using neural networks to learn how to drive through traffic made using synaptic.js, JavaScript, HTML and CSS</li>
-            <li> <span class="project-title">Neural Networks from Scratch:</span> A neural network made from scratch using only numpy and math</li>
-            <li> <span class="project-title">RateMyResume:</span> A resume reviewer make with Vue.js, MongoDB, Node.js and Express.js</li>
-            <li> <span class="project-title">Productive:</span> A productivity tool made with Vue.js, MongoDB, Node.js and Express.js (Hackathon Project)</li>
-            <li> <span class="project-title">NaturalSelection:</span> A vizualizer for genetic algorithms made with JavaScript, HTML and CSS</li>
-            <li> <span class="project-title">EpidemicSimulation:</span> Mathematical Modelling of an epidemic simulated in Python using Tkinter</li>
-        </ul>
     </div>
+
     
     <div class="sub-heading" v-if="mounted" id="exp">
-        <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Work Experience <img src="https://img.icons8.com/color/96/null/hard-working.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;" ></h1>
+        <h1 style="font-size: 3em; border-bottom: 1px solid #61677A;">Experience <img src="https://img.icons8.com/color/96/null/hard-working.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;" ></h1>    
         <div class="work-button-group">
-            <a class="work-button" v-on:click="exp1 = !exp1; ">Office of Undergraduate Research at Purdue University</a>
+            <a class="work-button" v-on:click="exp1 = !exp1; exp2=false; exp3=false; exp4=false; exp5=false;">Purdue CS Department</a>
+            <a class="work-button" v-on:click="exp2 = !exp2; exp1=false; exp3=false; exp4=false; exp5=false;">Purdue Pathlology Lab</a>
+            <a class="work-button" v-on:click="exp3 = !exp3; exp1=false; exp2=false; exp4=false; exp5=false;">INDESS Labs</a>
+            <a class="work-button" v-on:click="exp4 = !exp4; exp1=false; exp2=false; exp3=false; exp5=false;">Discovery Park</a>
+            <a class="work-button" v-on:click="exp5 = !exp5; exp1=false; exp2=false; exp3=false; exp4=false;">FarmBridge</a>
+        </div>
+        <div class="work-description">
             <div class="workexp" v-if="exp1">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern</h2>
+            <h2 class="animate__animated animate__lightSpeedInLeft">Teaching Assistant</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li> Conducting research projects and assisting in operations </li>
+                <li> - UTA for Data Structures and Algorithms (CS 251)</li>
+                <li> - Conducted weekly office hours, providing support to students, addressing their questions, and clarifying course concepts.</li>
+                <li> - Graded assignments and provided constructive feedback to students, aiding their understanding of course materials.</li>
             </ul>
-            </div>
-            <a class="work-button" v-on:click="exp2 = !exp2; ">Prof. Tianyi Li Research Group</a>
-            <div class="workexp" v-if="exp2">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant</h2>
+        </div>
+
+        <div class="workexp" v-if="exp2">
+        <h2 class="animate__animated animate__lightSpeedInLeft">Assistant Software Developer</h2>
+        <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
+            <li> - Developed Python-based interactive desktop application for calculating and visualizing infectious disease spread risks</li>
+            <li> - Incorporated real-time data analysis to enhance accuracy using dynamic data sources </li>
+            <li>- Designed intuitive, user-friendly visualizations for effective decision-making in disease control and prevention</li>
+        </ul>
+        </div>
+        <div class="workexp" v-if="exp3">
+            <h2 class="animate__animated animate__lightSpeedInLeft">ML Research Intern</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li>Project: Control My News Feed: Exploring Users Manipulate Social Media Recommendation Systems</li>
-                <li>Researching social media addiction to build better recommender systems</li>
+                <li>- Developed a robust Flask REST API to integrate a pre-trained Multi-Label Classifier in a system with
+microservice architecture enhancing overall functionality</li>
+                <li> - Integration of API optimized data flow and improved processing with a 10% increase in efficiency </li>
+                <li> - Deployed API on AWS EC2 instances using Docker Container to ensure scalability and high performance </li>
+                <li> - Developed in Python using scikit-learn, Keras, pandas, nltk, Flask and Docker </li>
             </ul>
-            </div>
-            <a class="work-button" v-on:click="exp3 = !exp3; ">INDESS Labs(Intelligent Decision Support Systems)</a>
-            <div class="workexp" v-if="exp3">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Assistant</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li>Project: Investigating Explainability of Machine Learning Model Decisions for Injury Surveillance.</li>
-                <li>Worked in a team of 5 to build software utilizing Machine Learning Models for predicting injury narratives
-                        in the workplace with 92% accuracy.</li>
-                <li>Created an explainable interface to explain the model decisions and improve upon its accuracy through
-                        human coding by 5%.</li>
-                <li>Developed in Python <img src="https://img.icons8.com/color/48/000000/python.png" alt="Website" width="20" height="20" text-decoration="None"> using tensorflow, keras, pandas, numpy, sklearn, matplotlib, LIME, sHap and InterpretML</li>
-            </ul>
-            </div>
-            <a class="work-button" v-on:click="exp4 = !exp4; ">Discovery Park at Purdue University</a>
-            <div class="workexp" v-if="exp4">
-            <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li>Project: Text Mining and Classification of Injury Narratives.</li>
-                <li>Set up Data Pipelines using web scraping frameworks to create datasets of more than 50,000 data points
-                        social media data from websites like Amazon, Reddit and Twitter related to product usage andreviews.</li>
-                <li>Worked in a team of 4 to build Natural Language Processing (NLP) Models with 85% accuracy to identify
-                        injury cases, categorize body parts and diagnosis of the injury cases.</li>
-                <li>Developed in Python <img src="https://img.icons8.com/color/48/000000/python.png" width="20" height="20" text-decoration="None"> using tensorflow, keras, scikit-learn, pandas, BeautifulSoup and Selenium</li>
-            </ul>
-            </div>
-            <a class="work-button" v-on:click="exp5 = !exp5; ">FarmBridge - AgTech Startup</a>
-            <div class="workexp" v-if="exp5" >
-            <h2 class="animate__animated animate__lightSpeedInLeft">Software Engineering Intern</h2>
-            <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li>Built a Java Application working in a team of 6 to process 1GB of raw climate data to retrieve, organize and output climate reports used for preparing client pitches.</li>
-                <li>Packaged the application for both Windows and macOS systems which reduced 30 work hours per month.</li>
-                <li>Prepared data focused presentations with 20 clients resulting in a 90% success rate of securing funding</li>
-                <li>Developed in Java <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" width="20" height="20" text-decoration="None"> using JavaFX, Object-Oriented Programming Techniques, SQL, JDBC and MS Access</li>
-            </ul>
-            </div>
+        </div>
+        <div class="workexp" v-if="exp4">
+        <h2 class="animate__animated animate__lightSpeedInLeft">Research Intern</h2>
+        <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
+            <li>- Created Data Pipelines using web scraping and data mining frameworks to consolidate datasets with over 50,000 data points from websites like Amazon, Reddit and Twitter related to product usage</li>
+            <li>- Developed Natural Language Processing (NLP) Models with 85% accuracy identifying injury cases, catego- rizing body parts and classifying injury cases</li>
+            <li>- Deployed the NLP Models as a REST API within a Docker container to enable real-time predictions</li>
+            <li>- Developed in Python using tensorflow, scikit-learn, Keras, Flask, Selenium and Docker</li>
+        </ul>
+       </div>
+       <div class="workexp" v-if="exp5" >
+        <h2 class="animate__animated animate__lightSpeedInLeft">Software Engineering Intern</h2>
+        <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
+            <li>- Designed and implemented a robust Java application to efficiently process and restructure 10GB of raw data, optimizing it for streamlined analysis and subsequent inclusion in client reports</li>
+            <li>- Developed a RESTful API using Spring Boot that implements an efficient endpoint to query SQL database and respond with serialized data in JSON format</li>
+            <li>- Tracked and documented bug fixes using JUnit test cases increasing software stability by 15%</li>
+            <li>- Developed in Java using Spring Boot, SQL, JDBC, JSON and MS Access</li>
+        </ul>
+       </div>
         </div>
         
     </div>
 
     <div class="sub-heading" v-if="mounted" id="research">
-        <h1 style="font-size: 3em; border-bottom: 1px solid #112D4E;">Research <img src="https://img.icons8.com/color/96/null/brain.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;"></h1>
+        <h1 style="font-size: 3em; border-bottom: 1px solid #61677A;">Research <img src="https://img.icons8.com/color/96/null/brain.png" alt="Website" width="30" height="40" text-decoration="None" style="translate: 0px 10px;"></h1>
         <div class="research-show">
             <a class="research-button">Control My News Feed: Exploring How Users Manipulate Social Media Recommendation Systems</a>
             <div class="researchexp">
