@@ -12,7 +12,7 @@
         <h2>Research in <span class="job">Natural Language Processing and Explainable AI</span></h2>
     </div>
     <div class="navigation" v-if="mounted">
-        <a class="nav-button" v-on:click="scrollToSummary">About Me</a>
+        <a class="nav-button" v-on:click="scrollToSummary">About</a>
         <a class="nav-button" v-on:click="scrollToExp">Experience</a>
         <a class="nav-button" v-on:click="scrollToPP">Projects</a>
         <a class="nav-button" v-on:click="scrollToSkills">Skills</a>
@@ -350,8 +350,7 @@ microservice architecture enhancing overall functionality</li>
             <img src="https://img.icons8.com/cotton/64/null/circled-chevron-up.png" alt="Go to top" style="width: 60px; height: 60px;"/>
     </a>
     <div class="footer">  
-        <span class="footer-text">Made with <img src="https://img.icons8.com/doodle/48/null/hearts--v1.png" alt="love" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" /> and 
-            <img src="https://img.icons8.com/color/96/null/vue-js.png" alt="Vue.js" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" />By Harmya</span>
+        <span class="footer-text">Made with <img src="https://img.icons8.com/color/96/null/vue-js.png" alt="Vue.js" style="width: 50px; height: 50px; translate: 0px 10px; background: transparent;" />By Harmya</span>
     </div>
 
 
