@@ -49,7 +49,7 @@
             <div class="workexp" v-if="exp1">
             <h2 class="animate__animated animate__lightSpeedInLeft">Teaching Assistant</h2>
             <ul class="animate__animated animate__lightSpeedInLeft" style="font-size: 1.4em;"> 
-                <li> - UTA for Data Structures and Algorithms (CS 251)</li>
+                <li> - Teaching Assistant for Data Structures and Algorithms (CS 251)</li>
                 <li> - Conducted weekly office hours, providing support to students, addressing their questions, and clarifying course concepts.</li>
                 <li> - Graded assignments and provided constructive feedback to students, aiding their understanding of course materials.</li>
             </ul>
