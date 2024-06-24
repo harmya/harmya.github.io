@@ -32,9 +32,7 @@
     font-size: 16px;
   }
 
-  .app-container {
-    z-index: 10;
-  }
+
   .greeting {
     display: flex;
     flex-direction: column;
@@ -57,6 +55,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
   .container {
     background-color: var(--terminal-background);
