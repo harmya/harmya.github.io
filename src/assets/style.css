@@ -1,0 +1,162 @@
+  html {
+    scroll-behavior: smooth;
+  } 
+  :root {
+    --background-color: #171717;
+    --terminal-background: #171717;
+    --text-color: #EDEDED;
+
+    --terminal-border: #383b44;
+    --terminal-menu-background: #2b2b2b;
+   
+  }
+
+  body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+  }
+  input {
+    border: none;
+    outline: none;
+    background-color: unset;
+    font-size: 16px;
+    width: 100%;
+    color: var(--text-color);
+    font-family: 'Source Code Pro', monospace;
+  }
+  p {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .app-container {
+    z-index: 10;
+  }
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .greeting h1 { 
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text-color);
+  }
+  .greeting p {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text-color);
+    font-size: 16px;
+
+  }
+  .links-to {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  .container {
+    background-color: var(--terminal-background);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border: 2px solid var(--terminal-border);
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  .terminal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 15px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .terminal-menu {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 25px;
+    padding: 0 20px;
+    background-color: var(--terminal-menu-background);
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+
+  .button-red {
+    background-color: #ff0000;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 3px;
+  }
+
+  .button-yellow {
+    background-color: #ffcc00;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 3px;
+  }
+
+  .button-green {
+    background-color: #00cc00;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 3px;
+  }
+
+  .terminal-title {
+    text-align: center;
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .terminal-title h1 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .terminal-input {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  .terminal-output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin: 0;
+  }
+
+  .command {
+    color: #00ff00;
+  }
+
+  .username {
+    color: #00ccff;
+  }
