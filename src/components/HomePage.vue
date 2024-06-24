@@ -8,11 +8,11 @@
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> <span class="links-text">\Home</span></a>
         <a href="mailto: hvbhatt@purdue.edu" target="_blank"> <span class="links-text">\Contact</span></a>
     </div>
-    <div class="greeting">
+    <div class="greeting animate__animated animate__fadeInLeft animate__delay-0.2s">
         <h1> Hello, I'm Harmya Bhatt</h1>
         <p> I like to build things with code</p>
     </div>
-    <div class="container animate__animated animate__fadeIn">
+    <div class="container animate__animated animate__fadeIn animate__delay-0.3s">
         <div class="terminal-menu">
             <div class="buttons-container">
                 <div class="button-red"></div>
