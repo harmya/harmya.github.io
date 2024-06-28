@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import VueAnimateOnScroll from 'vue-animate-onscroll'
 import 'animate.css';
-import VueGlide from 'vue-glide-js'
+import router from './router'
 
-createApp(App).use(VueAnimateOnScroll).use(VueGlide).mount('#app')
+
+createApp(App).use(VueAnimateOnScroll).use(router).mount('#app')
