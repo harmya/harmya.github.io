@@ -11,7 +11,7 @@
         <span class="links-text">\github</span></a
       >
       <a
-        href="Resume_2023_SWE.pdf"
+        href="Resume_2024.pdf"
         download="harmya_bhatt_resume"
         target="_blank"
       >
@@ -106,15 +106,15 @@ export default {
       workExperience: [
         {
           company: 'Cohere Health',
-          position: 'Software Engineer',
-          duration: 'Date - Present',
+          position: 'Software Engineering Intern',
+          duration: 'Jun 2024 - Present',
           description:
-            'Integrating ML tools for seamless prior authorizations, developing and releasing front-end and back-end features, writing Cypress tests, and collaborating with the ML team to enhance processes. Working on automation solutions to digitize workflows and improve patient outcomes.',
+            'Integrating ML tools for seamless prior authorizations, developing and releasing front-end and back-end features, writing Cypress tests. Working on automation solutions to digitize workflows and improve patient outcomes.',
         },
         {
           company:
-            'Purdue University - Intelligent Decision Support Systems Research Group',
-          position: 'Machine Learning Research Intern',
+            'Purdue University: INDESS Research Group',
+          position: 'ML Research Intern',
           duration: 'May 2023 - Aug 2023',
           description:
             'Developed a Flask REST API to integrate a Multi-Label Classifier within a microservice architecture. Optimized data flow and processing, improving efficiency by 10%. Deployed API on AWS EC2 using Docker for scalability. Technologies: Python, scikit-learn, Keras, pandas, nltk, Flask, Docker.',
@@ -134,17 +134,72 @@ export default {
             'Designed a Java application to process 10GB of raw data for client reports. Developed a RESTful API with Spring Boot for efficient database querying. Improved software stability by 25% with JUnit test cases. Technologies: Java, Spring Boot, SQL, JDBC, JSON, MS Access.',
         },
       ],
+
+      projects: [
+  {
+    name: 'Particle Life Simulation',
+    description: 'This project includes a particle life simulation where particles are created at random positions and move in random directions. It features a quadtree implementation for efficient neighbor detection.There attraction forces based on particle color influence their movement: red particles attract each other, and green particles attract red particles.',
+    link: 'https://www.github.com/harmya/particle-life/'
+  },
+  {
+    name: 'Computed Tomography',
+    description: 'This project involves tomographic reconstruction. By taking multiple projections, the 2D Fourier Transform of the object can be constructed, and its inverse yields the original object. An example of this process is demonstrated through a CAT scan animation.',
+    link: 'https://www.github.com/harmya/tomography/'
+  },
+  {
+    name: 'Indoor Scene Recognition',
+    description: 'This project presents a novel approach using bound embeddings. It leverages YOLOv9 to generate local information about objects in an image, which is then passed to a pre-trained image classification model for enhanced scene recognition.',
+    link: 'https://www.github.com/harmya/indoor-scene-recognition/'
+  },
+]
+
     };
   },
   mounted() {
+    this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
     this.$refs.focusInput.focus();
   },
   methods: {
     goToFriends() {
       this.$router.push('/friends');
     },
-    workSummary() {},
+    workSummary() {
+      return this.workExperience
+        .map(
+          (w) =>
+            `<p><span class="company">${w.company}</span> - <span class="position">${w.position}</span><br>${w.duration}<br>${w.description}</p>`,
+        )
+        .join('');
+    },
+
+    projectsSummary() {
+      const titleMessage = 'Here are some projects I have worked on recently: <br><br>';
+      const endMessage = '<p> Check out my <u><a href="https://www.github.com/harmya" target="_blank">/gitHub</a></u> for more projects </p>';
+      const projects = this.projects
+        .map(
+          (p) =>
+            `<p><a href="${p.link}" class="project-name"><u>${p.name}</u></a><br>${p.description}</p> <br>`,
+        )
+        .join('');
+      return `<span class="project-title">${titleMessage}</span>${projects}<br>${endMessage}`;
+    },
     handleSubmit(event) {
+      if (event.key === 'Tab') {
+        //autocomplete
+        const input = this.$refs.focusInput;
+        const command = input.value.trim().toLowerCase();
+        const matches = this.commands
+          .map((c) => c.name)
+          .filter((c) => c.startsWith(command));
+        
+        if (matches.length === 1) {
+          input.value = matches[0];
+        } else if (matches.length > 1) {
+          matches.sort();
+          input.value = matches[0];
+        }
+        event.preventDefault();
+      }
       if (event.key === 'Enter') {
         const input = this.$refs.focusInput;
         const command = input.value.trim().toLowerCase();
@@ -168,13 +223,24 @@ export default {
             .join('');
         } else if (command === 'diya') {
           output = 'goops';
-        } else {
+        } else if (command === 'work') {
+          output = this.workSummary();
+        } else if (command === 'projects') {
+          output = this.projectsSummary();
+        } else if (command === 'skills') {
+          output = 'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
+        } else if (command === 'contact') {
+          output = 'Email: hvbhatt@purdue.edu';
+        }
+        else {
           output = "Command not found. Type 'help' for a list of commands";
         }
 
         newLine.innerHTML = `${promtAndCommand}<p>${output}</p>`;
         newLine.classList.add('terminal-output');
         document.querySelector('.terminal-input').before(newLine);
+        this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
+        this.$refs.focusInput.focus();
       }
     },
   },
