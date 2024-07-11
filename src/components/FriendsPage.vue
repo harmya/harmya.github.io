@@ -78,6 +78,17 @@
             - 10x Engineer, AI, SWE and Systems
           </p>
         </li>
+        <li class="friend-item">
+          <p>
+            <a
+              href="https://www.siddharthshah.tech/"
+              target="_blank"
+              class="name"
+              >Sarthak Mangla</a
+            >
+            - Software, AI and Cole Palmer Fan
+          </p>
+        </li>
       </ul>
     </div>
   </div>
