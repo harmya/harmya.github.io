@@ -97,6 +97,10 @@ export default {
           name: 'clear',
           description: 'Clear the terminal',
         },
+        {
+          name: 'cd',
+          description: 'Go to a specific directory (listed above)',
+        },
       ],
 
       workExperience: [
@@ -210,8 +214,11 @@ export default {
         const promtAndCommand = `<p class="prompt">${this.prompt}${command}</p>`;
         let output = '';
 
-        this.userHistory.push(command);
-        this.commandCounter = this.userHistory.length;
+        if (command) {
+          this.userHistory.push(command);
+          this.commandCounter = this.userHistory.length;
+        }
+        console.log(this.userHistory);
         if (command === 'clear') {
           document
             .querySelectorAll('.terminal-output')
@@ -235,6 +242,8 @@ export default {
             'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
         } else if (command === 'contact') {
           output = 'Email: hvbhatt@purdue.edu';
+        } else if (command === '') {
+          output = '';
         } else {
           output = "Command not found. Type 'help' for a list of commands";
         }
@@ -245,12 +254,13 @@ export default {
         this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
         this.$refs.focusInput.focus();
       } else if (event.key === 'ArrowUp') {
+        console.log(this.commandCounter);
         const input = this.$refs.focusInput;
         const lastCommandIndex =
           this.commandCounter === -1 || this.commandCounter === 0
-            ? 1
-            : this.commandCounter;
-        const lastCommand = this.userHistory[lastCommandIndex - 1];
+            ? 0
+            : this.commandCounter - 1;
+        const lastCommand = this.userHistory[lastCommandIndex];
         if (lastCommand) {
           input.value = '';
           input.value = lastCommand;
@@ -258,14 +268,21 @@ export default {
           setTimeout(() => {
             input.setSelectionRange(input.value.length, input.value.length);
           }, 10);
-          this.commandCounter = lastCommandIndex - 1;
+          this.commandCounter = lastCommandIndex;
         }
       } else if (event.key === 'ArrowDown') {
+        console.log(this.commandCounter);
+        console.log(this.userHistory.length);
         const input = this.$refs.focusInput;
         const nextCommandIndex =
           this.commandCounter === this.userHistory.length
             ? this.userHistory.length
             : this.commandCounter + 1;
+        if (nextCommandIndex === this.userHistory.length) {
+          input.value = '';
+          this.commandCounter = this.userHistory.length;
+          return;
+        }
         const nextCommand = this.userHistory[nextCommandIndex];
         if (nextCommand) {
           input.value = '';
