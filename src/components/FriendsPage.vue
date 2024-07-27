@@ -17,7 +17,7 @@
         <li class="friend-item">
           <p>
             <a href="https://bhavesh.dev/" target="_blank" class="name"
-              >Bhavesh Pareekh</a
+              >Bhavesh Pareek</a
             >
             - Software Engineering, Hosting and basically everything
           </p>
@@ -81,7 +81,7 @@
         <li class="friend-item">
           <p>
             <a
-              href="https://www.siddharthshah.tech/"
+              href="https://www.sarthakmangla.com/"
               target="_blank"
               class="name"
               >Sarthak Mangla</a
