@@ -15,14 +15,20 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
 input {
-  border: none;
+  border: solid 1px #383b44;
   outline: none;
   background-color: unset;
   font-size: 16px;
   width: 100%;
   color: var(--text-color);
   font-family: 'Source Code Pro', monospace;
+}
+@media (max-width: 510px) {
+  input {
+    font-size: 14px;
+  }
 }
 p {
   position: relative;
@@ -39,6 +45,12 @@ p {
 .greeting h1 {
   font-family: 'Source Code Pro', monospace;
   color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+  .greeting h1 {
+    font-size: 24px;
+  }
 }
 .greeting p {
   font-family: 'Source Code Pro', monospace;
