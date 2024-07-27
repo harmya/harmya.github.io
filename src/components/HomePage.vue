@@ -4,19 +4,30 @@
       class="links-to animate__animated animate__fadeInRight animate__delay-0.2s"
       v-if="mounted"
     >
-      <a href="https://www.linkedin.com/in/harmyacs/" target="_blank">
-        <span class="links-text">/about</span></a
+      <a
+        href="https://www.linkedin.com/in/harmyacs/"
+        target="_blank"
+        ref="linkedin"
       >
-      <a href="https://www..com/harmya" target="_blank">
+        <span class="links-text">/linkedin</span></a
+      >
+      <a href="https://www.github.com/harmya" target="_blank" ref="github">
         <span class="links-text">/github</span></a
       >
-      <a href="Resume_2024.pdf" download="harmya_bhatt_resume" target="_blank">
+      <a
+        href="Resume_2024.pdf"
+        download="harmya_bhatt_resume"
+        target="_blank"
+        ref="resume"
+      >
         <span class="links-text">/resume</span></a
       >
-      <a href="mailto: hvbhatt@purdue.edu" target="_blank">
+      <a href="mailto: hvbhatt@purdue.edu" target="_blank" ref="email">
         <span class="links-text">/contact</span></a
       >
-      <span class="links-text" @click="goToFriends">/friends</span>
+      <span class="links-text" @click="goToFriends" ref="friends">
+        /friends</span
+      >
     </div>
     <div
       class="greeting animate__animated animate__fadeInLeft animate__delay-0.2s"
@@ -190,24 +201,50 @@ export default {
     },
     handleSubmit(event) {
       if (event.key === 'Tab') {
+        event.preventDefault();
         //autocomplete
         const input = this.$refs.focusInput;
-        const command = input.value.trim().toLowerCase();
-        const matches = this.commands
-          .map((c) => c.name)
-          .filter((c) => c.startsWith(command));
+        const command = input.value.trim().toLowerCase().split(' ')[0];
+        const args = input.value.trim().toLowerCase().split(' ').slice(1);
 
-        if (matches.length === 1) {
-          input.value = matches[0];
-        } else if (matches.length > 1) {
-          matches.sort();
-          input.value = matches[0];
+        if (args.length > 0) {
+          if (command === 'cd') {
+            const availableMatches = [
+              'linkedin',
+              'github',
+              'resume',
+              'email',
+              'friends',
+            ];
+            const navigateTo = args[0];
+            const matches = availableMatches.filter((m) =>
+              m.startsWith(navigateTo),
+            );
+            console.log('matches[0]', matches[0]);
+            if (matches.length === 1) {
+              input.value = `cd ${matches[0]}`;
+            } else if (matches.length > 1) {
+              matches.sort();
+              input.value = `cd ${matches[0]}`;
+            }
+          }
+        } else {
+          const matches = this.commands
+            .map((c) => c.name)
+            .filter((c) => c.startsWith(command));
+
+          if (matches.length === 1) {
+            input.value = matches[0];
+          } else if (matches.length > 1) {
+            matches.sort();
+            input.value = matches[0];
+          }
         }
-        event.preventDefault();
       }
       if (event.key === 'Enter') {
         const input = this.$refs.focusInput;
-        const command = input.value.trim().toLowerCase();
+        const command = input.value.trim().toLowerCase().split(' ')[0];
+        const args = input.value.trim().toLowerCase().split(' ').slice(1);
         input.value = '';
 
         const newLine = document.createElement('div');
@@ -218,7 +255,6 @@ export default {
           this.userHistory.push(command);
           this.commandCounter = this.userHistory.length;
         }
-        console.log(this.userHistory);
         if (command === 'clear') {
           document
             .querySelectorAll('.terminal-output')
@@ -242,6 +278,25 @@ export default {
             'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
         } else if (command === 'contact') {
           output = 'Email: hvbhatt@purdue.edu';
+        } else if (command === 'cd') {
+          if (args.length === 0) {
+            output = '';
+          } else {
+            const navigateTo = args[0];
+            if (navigateTo === 'linkedin') {
+              this.$refs.linkedin.click();
+            } else if (navigateTo === 'github') {
+              this.$refs.github.click();
+            } else if (navigateTo === 'resume') {
+              this.$refs.resume.click();
+            } else if (navigateTo === 'email') {
+              this.$refs.email.click();
+            } else if (navigateTo === 'friends') {
+              this.goToFriends();
+            } else {
+              output = `Not found: ${navigateTo}`;
+            }
+          }
         } else if (command === '') {
           output = '';
         } else {
@@ -254,7 +309,6 @@ export default {
         this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
         this.$refs.focusInput.focus();
       } else if (event.key === 'ArrowUp') {
-        console.log(this.commandCounter);
         const input = this.$refs.focusInput;
         const lastCommandIndex =
           this.commandCounter === -1 || this.commandCounter === 0
@@ -271,8 +325,6 @@ export default {
           this.commandCounter = lastCommandIndex;
         }
       } else if (event.key === 'ArrowDown') {
-        console.log(this.commandCounter);
-        console.log(this.userHistory.length);
         const input = this.$refs.focusInput;
         const nextCommandIndex =
           this.commandCounter === this.userHistory.length
