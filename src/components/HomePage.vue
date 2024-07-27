@@ -5,22 +5,18 @@
       v-if="mounted"
     >
       <a href="https://www.linkedin.com/in/harmyacs/" target="_blank">
-        <span class="links-text">\about</span></a
+        <span class="links-text">/about</span></a
       >
-      <a href="https://www.github.com/harmya" target="_blank">
-        <span class="links-text">\github</span></a
+      <a href="https://www..com/harmya" target="_blank">
+        <span class="links-text">/github</span></a
       >
-      <a
-        href="Resume_2024.pdf"
-        download="harmya_bhatt_resume"
-        target="_blank"
-      >
-        <span class="links-text">\resume</span></a
+      <a href="Resume_2024.pdf" download="harmya_bhatt_resume" target="_blank">
+        <span class="links-text">/resume</span></a
       >
       <a href="mailto: hvbhatt@purdue.edu" target="_blank">
-        <span class="links-text">\contact</span></a
+        <span class="links-text">/contact</span></a
       >
-      <span class="links-text" @click="goToFriends">\friends</span>
+      <span class="links-text" @click="goToFriends">/friends</span>
     </div>
     <div
       class="greeting animate__animated animate__fadeInLeft animate__delay-0.2s"
@@ -112,8 +108,7 @@ export default {
             'Integrating ML tools for seamless prior authorizations, developing and releasing front-end and back-end features, writing Cypress tests. Working on automation solutions to digitize workflows and improve patient outcomes.',
         },
         {
-          company:
-            'Purdue University: INDESS Research Group',
+          company: 'Purdue University: INDESS Research Group',
           position: 'ML Research Intern',
           duration: 'May 2023 - Aug 2023',
           description:
@@ -136,23 +131,27 @@ export default {
       ],
 
       projects: [
-  {
-    name: 'Particle Life Simulation',
-    description: 'This project includes a particle life simulation where particles are created at random positions and move in random directions. It features a quadtree implementation for efficient neighbor detection.There attraction forces based on particle color influence their movement: red particles attract each other, and green particles attract red particles.',
-    link: 'https://www.github.com/harmya/particle-life/'
-  },
-  {
-    name: 'Computed Tomography',
-    description: 'This project involves tomographic reconstruction. By taking multiple projections, the 2D Fourier Transform of the object can be constructed, and its inverse yields the original object. An example of this process is demonstrated through a CAT scan animation.',
-    link: 'https://www.github.com/harmya/tomography/'
-  },
-  {
-    name: 'Indoor Scene Recognition',
-    description: 'This project presents a novel approach using bound embeddings. It leverages YOLOv9 to generate local information about objects in an image, which is then passed to a pre-trained image classification model for enhanced scene recognition.',
-    link: 'https://www.github.com/harmya/indoor-scene-recognition/'
-  },
-]
-
+        {
+          name: 'Particle Life Simulation',
+          description:
+            'This project includes a particle life simulation where particles are created at random positions and move in random directions. It features a quadtree implementation for efficient neighbor detection.There attraction forces based on particle color influence their movement: red particles attract each other, and green particles attract red particles.',
+          link: 'https://www.github.com/harmya/particle-life/',
+        },
+        {
+          name: 'Computed Tomography',
+          description:
+            'This project involves tomographic reconstruction. By taking multiple projections, the 2D Fourier Transform of the object can be constructed, and its inverse yields the original object. An example of this process is demonstrated through a CAT scan animation.',
+          link: 'https://www.github.com/harmya/tomography/',
+        },
+        {
+          name: 'Indoor Scene Recognition',
+          description:
+            'This project presents a novel approach using bound embeddings. It leverages YOLOv9 to generate local information about objects in an image, which is then passed to a pre-trained image classification model for enhanced scene recognition.',
+          link: 'https://www.github.com/harmya/indoor-scene-recognition/',
+        },
+      ],
+      userHistory: [],
+      commandCounter: 0,
     };
   },
   mounted() {
@@ -173,8 +172,10 @@ export default {
     },
 
     projectsSummary() {
-      const titleMessage = 'Here are some projects I have worked on recently: <br><br>';
-      const endMessage = '<p> Check out my <u><a href="https://www.github.com/harmya" target="_blank">/gitHub</a></u> for more projects </p>';
+      const titleMessage =
+        'Here are some projects I have worked on recently: <br><br>';
+      const endMessage =
+        '<p> Check out my <u><a href="https://www.github.com/harmya" target="_blank">/gitHub</a></u> for more projects </p>';
       const projects = this.projects
         .map(
           (p) =>
@@ -191,7 +192,7 @@ export default {
         const matches = this.commands
           .map((c) => c.name)
           .filter((c) => c.startsWith(command));
-        
+
         if (matches.length === 1) {
           input.value = matches[0];
         } else if (matches.length > 1) {
@@ -209,6 +210,8 @@ export default {
         const promtAndCommand = `<p class="prompt">${this.prompt}${command}</p>`;
         let output = '';
 
+        this.userHistory.push(command);
+        this.commandCounter = this.userHistory.length;
         if (command === 'clear') {
           document
             .querySelectorAll('.terminal-output')
@@ -228,11 +231,11 @@ export default {
         } else if (command === 'projects') {
           output = this.projectsSummary();
         } else if (command === 'skills') {
-          output = 'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
+          output =
+            'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
         } else if (command === 'contact') {
           output = 'Email: hvbhatt@purdue.edu';
-        }
-        else {
+        } else {
           output = "Command not found. Type 'help' for a list of commands";
         }
 
@@ -241,6 +244,38 @@ export default {
         document.querySelector('.terminal-input').before(newLine);
         this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
         this.$refs.focusInput.focus();
+      } else if (event.key === 'ArrowUp') {
+        const input = this.$refs.focusInput;
+        const lastCommandIndex =
+          this.commandCounter === -1 || this.commandCounter === 0
+            ? 1
+            : this.commandCounter;
+        const lastCommand = this.userHistory[lastCommandIndex - 1];
+        if (lastCommand) {
+          input.value = '';
+          input.value = lastCommand;
+          // timeout because we need to wait till the DOM updates
+          setTimeout(() => {
+            input.setSelectionRange(input.value.length, input.value.length);
+          }, 10);
+          this.commandCounter = lastCommandIndex - 1;
+        }
+      } else if (event.key === 'ArrowDown') {
+        const input = this.$refs.focusInput;
+        const nextCommandIndex =
+          this.commandCounter === this.userHistory.length
+            ? this.userHistory.length
+            : this.commandCounter + 1;
+        const nextCommand = this.userHistory[nextCommandIndex];
+        if (nextCommand) {
+          input.value = '';
+          input.value = nextCommand;
+          // timeout because we need to wait till the DOM updates
+          setTimeout(() => {
+            input.setSelectionRange(input.value.length, input.value.length);
+          }, 10);
+          this.commandCounter = nextCommandIndex;
+        }
       }
     },
   },
