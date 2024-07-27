@@ -252,7 +252,7 @@ export default {
         let output = '';
 
         if (command) {
-          this.userHistory.push(command);
+          this.userHistory.push(input.value);
           this.commandCounter = this.userHistory.length;
         }
         if (command === 'clear') {
