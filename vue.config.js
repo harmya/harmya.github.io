@@ -1,1 +1,4 @@
-export const publicPath = '/';
+const { defineConfig } = require('@vue/cli-service');
+module.exports = {
+  publicPath: '/',
+};
