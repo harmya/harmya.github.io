@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import FriendsPage from './components/FriendsPage.vue';
 
@@ -8,16 +8,15 @@ const routes = [
     name: 'FriendsPage',
     component: FriendsPage,
   },
-
   {
-    path: '',
+    path: '/',
     name: 'HomePage',
     component: HomePage,
   },
 ];
 
-const router = new createRouter({
-  history: createWebHashHistory(),
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 

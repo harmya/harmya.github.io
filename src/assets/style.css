@@ -66,6 +66,10 @@ p {
   margin-top: 20px;
   cursor: pointer;
 }
+.terminal-toggle {
+  width: 76px;
+  text-align: left;
+}
 .container {
   background-color: var(--terminal-background);
   display: flex;

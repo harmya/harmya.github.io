@@ -2,6 +2,7 @@
   <div
     class="friend-view animate__animated animate__fadeIn animate__delay-0.3s"
   >
+    <button class="back-button" @click="goBack">← Back</button>
     <h1 class="friend-title">Friends</h1>
     <h2>If you want to know people working on great stuff:</h2>
     <div class="friend-list">
@@ -100,8 +101,8 @@ import 'animate.css';
 export default {
   name: 'FriendsPage',
   methods: {
-    goToHome() {
-      this.$router.push('/');
+    goBack() {
+      this.$emit('hide-friends');
     },
   },
 };
@@ -113,5 +114,18 @@ export default {
   color: aqua;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.back-button {
+  background: none;
+  color: aqua;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.back-button:hover {
+  background: none;
 }
 </style>

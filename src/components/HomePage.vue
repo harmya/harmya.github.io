@@ -1,85 +1,163 @@
 <template>
-  <div class="app-container>">
-    <div
-      class="links-to animate__animated animate__fadeInRight animate__delay-0.2s"
-      v-if="mounted"
-    >
-      <a
-        href="https://www.linkedin.com/in/harmyacs/"
-        target="_blank"
-        ref="linkedin"
+  <div class="app-container">
+    <!-- Main content that will be hidden when friends is shown -->
+    <div v-if="!showingFriends">
+      <div
+        class="links-to animate__animated animate__fadeInRight animate__delay-0.2s"
+        v-if="mounted"
       >
-        <span class="links-text">/linkedin</span></a
+        <a
+          href="https://www.linkedin.com/in/harmyacs/"
+          target="_blank"
+          ref="linkedin"
+        >
+          <span class="links-text">/linkedin</span></a
+        >
+        <a href="https://www.github.com/harmya" target="_blank" ref="github">
+          <span class="links-text">/github</span></a
+        >
+        <a
+          href="Resume_2024.pdf"
+          download="harmya_bhatt_resume"
+          target="_blank"
+          ref="resume"
+        >
+          <span class="links-text">/resume</span></a
+        >
+        <a href="mailto: hvbhatt@purdue.edu" target="_blank" ref="email">
+          <span class="links-text">/contact</span></a
+        >
+        <span class="links-text" @click.prevent="goToFriends" ref="friends">
+          /friends</span
+        >
+        <span
+          class="links-text terminal-toggle"
+          @click.prevent="toggleTerminal"
+          ref="terminal"
+        >
+          {{ showingTerminal ? '/home' : '/terminal' }}</span
+        >
+      </div>
+      <div
+        class="greeting animate__animated animate__fadeInLeft animate__delay-0.2s"
       >
-      <a href="https://www.github.com/harmya" target="_blank" ref="github">
-        <span class="links-text">/github</span></a
+        <h1>Hello, I'm Harmya Bhatt</h1>
+        <p>I like math, ML and software</p>
+      </div>
+
+      <!-- Text Summary View (default) -->
+      <div
+        v-if="!showingTerminal"
+        class="summary-container animate__animated animate__fadeIn animate__delay-0.3s"
       >
-      <a
-        href="Resume_2024.pdf"
-        download="harmya_bhatt_resume"
-        target="_blank"
-        ref="resume"
-      >
-        <span class="links-text">/resume</span></a
-      >
-      <a href="mailto: hvbhatt@purdue.edu" target="_blank" ref="email">
-        <span class="links-text">/contact</span></a
-      >
-      <span class="links-text" @click="goToFriends" ref="friends">
-        /friends</span
-      >
-    </div>
-    <div
-      class="greeting animate__animated animate__fadeInLeft animate__delay-0.2s"
-    >
-      <h1>Hello, I'm Harmya Bhatt</h1>
-      <p>I like to build things with code</p>
-    </div>
-    <div
-      class="container animate__animated animate__fadeIn animate__delay-0.3s"
-    >
-      <div class="terminal-menu">
-        <div class="buttons-container">
-          <div class="button-red"></div>
-          <div class="button-yellow"></div>
-          <div class="button-green"></div>
-        </div>
-        <div class="terminal-title">
-          <h1><a href="https://harmya.me" target="_blank"> harmya.me </a></h1>
+        <div class="summary-content">
+          <div class="bio-paragraph">
+            <p>
+              I study Computer Science (and some Math) at Purdue University.
+              <br />
+              <br />
+              I have worked at Cohere Health doing software and ML work for
+              them. My research so far has involved using NLP for injury
+              detection, and developing a framework for analyzing dark patterns
+              in social media recommender systems. I hope to work on more
+              fundamental research problems.
+              <br />
+              <br />
+              I am currently working on writing my
+              <a
+                href="https://github.com/harmya/elden"
+                target="_blank"
+                style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
+                >own compiler</a
+              >
+              <br />
+              <br />
+              In past, I have made a
+              <a
+                href="https://github.com/harmya/rag-distillation"
+                target="_blank"
+                style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
+                >RAG assisted distillation framework</a
+              >, wrote a simulation of
+              <a
+                href="https://github.com/harmya/tomography"
+                target="_blank"
+                style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
+                >CT scan</a
+              >
+              machines, and multiple implementations of Deep Learning
+              architectures from scratch.
+              <br />
+              <br />
+              Also, I love football (actual) and I enjoy playing
+              <a
+                href="https://www.youtube.com/@harmyab"
+                target="_blank"
+                style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
+                >guitar</a
+              >.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="terminal">
-        <div class="terminal-intro">
-          <p
-            class="welcome-message"
-            style="padding-bottom: 5px; padding-left: 5px"
-          >
-            Logged in as <span class="username">visitor</span>
-          </p>
+
+      <!-- Terminal View -->
+      <div
+        v-if="showingTerminal"
+        class="container animate__animated animate__fadeIn animate__delay-0.3s"
+      >
+        <div class="terminal-menu">
+          <div class="buttons-container">
+            <div class="button-red"></div>
+            <div class="button-yellow"></div>
+            <div class="button-green"></div>
+          </div>
+          <div class="terminal-title">
+            <h1><a href="https://harmya.me" target="_blank"> harmya.me </a></h1>
+          </div>
         </div>
-        <div class="terminal-input">
-          <p class="prompt">visitor@home:~$&nbsp;</p>
-          <input
-            ref="focusInput"
-            @keydown="handleSubmit"
-            type="text"
-            class="input"
-            placeholder="Type 'help' for a list of commands"
-          />
+        <div class="terminal">
+          <div class="terminal-intro">
+            <p
+              class="welcome-message"
+              style="padding-bottom: 5px; padding-left: 5px"
+            >
+              Logged in as <span class="username">visitor</span>
+            </p>
+          </div>
+          <div class="terminal-input">
+            <p class="prompt">visitor@home:~$&nbsp;</p>
+            <input
+              ref="focusInput"
+              @keydown="handleSubmit"
+              type="text"
+              class="input"
+              placeholder="Type 'help' for a list of commands"
+            />
+          </div>
         </div>
       </div>
+    </div>
+    <div v-if="showingFriends" class="friends-container">
+      <FriendsPage @hide-friends="hideFriends" />
     </div>
   </div>
 </template>
 
 <script>
 import 'animate.css';
+import FriendsPage from './FriendsPage.vue';
 
 export default {
   name: 'HomePage',
+  components: {
+    FriendsPage,
+  },
   data() {
     return {
       mounted: false,
+      showingFriends: false,
+      showingTerminal: false, // New state to track if terminal is visible
       prompt: 'visitor@home:~$ ',
       commands: [
         {
@@ -94,12 +172,10 @@ export default {
           name: 'projects',
           description: 'Projects I have worked on',
         },
-
         {
           name: 'skills',
           description: 'List of skills I have',
         },
-
         {
           name: 'contact',
           description: 'Ways to contact me',
@@ -170,13 +246,65 @@ export default {
     };
   },
   mounted() {
-    this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
-    this.$refs.focusInput.focus();
+    // Only focus the input if terminal is showing
+    if (this.showingTerminal) {
+      this.$nextTick(() => {
+        this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
+        this.$refs.focusInput.focus();
+      });
+    }
+
+    history.pushState({ page: 'home' }, '', window.location.pathname);
+
+    window.addEventListener('popstate', (event) => {
+      if (this.showingFriends) {
+        event.preventDefault();
+        this.goBackToHome();
+        history.pushState({ page: 'home' }, '', window.location.pathname);
+        return;
+      }
+    });
+  },
+  beforeUnmount() {
+    window.removeEventListener('popstate', this.handlePopState);
   },
   methods: {
-    goToFriends() {
-      this.$router.push('/friends');
+    // New method to toggle between terminal and text view
+    toggleTerminal() {
+      this.showingTerminal = !this.showingTerminal;
+
+      // Focus input when terminal is shown
+      if (this.showingTerminal) {
+        this.$nextTick(() => {
+          if (this.$refs.focusInput) {
+            this.$refs.focusInput.scrollIntoView({ behavior: 'smooth' });
+            this.$refs.focusInput.focus();
+          }
+        });
+      }
     },
+
+    goToFriends() {
+      this.showingFriends = true;
+    },
+    hideFriends() {
+      this.showingFriends = false;
+    },
+
+    goBackToHome() {
+      this.showingFriends = false;
+      history.pushState({ page: 'home' }, '', window.location.pathname);
+
+      // Only focus if terminal is showing
+      if (this.showingTerminal) {
+        this.$nextTick(() => {
+          if (this.$refs.focusInput) {
+            this.$refs.focusInput.focus();
+          }
+        });
+      }
+    },
+
     workSummary() {
       return this.workExperience
         .map(
@@ -278,6 +406,9 @@ export default {
             'Python, Java, JavaScript, HTML, CSS, SQL, Docker, Flask, Spring Boot, scikit-learn, Keras, TensorFlow, Selenium, pandas, nltk, AWS, Git, JUnit, Cypress';
         } else if (command === 'contact') {
           output = 'Email: hvbhatt@purdue.edu';
+        } else if (command === 'home') {
+          this.showingTerminal = false;
+          return;
         } else if (command === 'cd') {
           if (args.length === 0) {
             output = '';
@@ -292,7 +423,10 @@ export default {
             } else if (navigateTo === 'email') {
               this.$refs.email.click();
             } else if (navigateTo === 'friends') {
-              this.goToFriends();
+              this.goToFriends(null);
+            } else if (navigateTo === 'home') {
+              this.showingTerminal = false;
+              return;
             } else {
               output = `Not found: ${navigateTo}`;
             }
@@ -358,4 +492,70 @@ export default {
 
 <style>
 @import '../assets/style.css';
+
+.summary-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: none;
+}
+
+.summary-content {
+  padding: 20px;
+  color: #f8f8f2;
+}
+
+.friends-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.friends-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+.friend-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.friend-list {
+  margin-top: 20px;
+}
+
+.friend-item {
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+.friend-item:hover {
+  transform: translateX(5px);
+}
+
+.name {
+  font-weight: bold;
+  color: aqua;
+  cursor: pointer;
+  text-decoration: underline;
+}
 </style>
