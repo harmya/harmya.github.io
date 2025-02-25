@@ -85,7 +85,7 @@
                 style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
                 >CT scan</a
               >
-              machines, and multiple implementations of Deep Learning
+              machines, and wrote multiple implementations of Deep Learning
               architectures from scratch.
               <br />
               <br />
