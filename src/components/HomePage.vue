@@ -17,7 +17,7 @@
           <span class="links-text">/github</span></a
         >
         <a
-          href="Resume_2024.pdf"
+          href="harmya_2025.pdf"
           download="harmya_bhatt_resume"
           target="_blank"
           ref="resume"
