@@ -63,12 +63,12 @@
               fundamental research problems.
               <br />
               <br />
-              I am currently working on writing my
+              I am currently working on
               <a
-                href="https://github.com/harmya/elden"
+                href="https://tensara.org/"
                 target="_blank"
                 style="text-decoration: none; border-bottom: 1px dotted #f8f8f2"
-                >own compiler</a
+                >Tensara</, a competitive GPU programming platform
               >
               <br />
               <br />
