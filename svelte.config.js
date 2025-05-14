@@ -19,7 +19,13 @@ const config = {
 			fallback: 'index.html',  // This is important for SPA mode
 			precompress: false,
 			strict: false  // This allows us to ignore the dynamic route warning
-		})
+		}),
+		
+		// Add this paths configuration for your custom domain
+		paths: {
+			base: '',
+			relative: false
+		}
 	}
 };
 
