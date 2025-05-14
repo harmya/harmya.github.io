@@ -277,6 +277,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .content {
+      max-width: 75vw;
+      min-width: 0;
+      padding: 1.2rem 0.5rem 2rem 0.5rem;
+    }
+    main {
+      padding: 0.5rem;
+    }
   }
 
   /* Typography */
