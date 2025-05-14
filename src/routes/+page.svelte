@@ -178,7 +178,7 @@
             At university, I was also involved in research with 
             <a href="https://web.ics.purdue.edu/~gnanda/RGroup.html" target="_blank" rel="noopener noreferrer">Dr Gaurav Nanda</a> 
             working on ML Models (and some XAI) for injury classification and 
-            <a href="https://web.ics.purdue.edu/~sneh/index.html" target="_blank" rel="noopener noreferrer   ">Dr Tianyi Li</a> 
+            <a href="https://tl-tianyi-li.github.io/" target="_blank" rel="noopener noreferrer   ">Dr Tianyi Li</a> 
             working on Human-Computer Interaction for recommender systems. 
             Also, I had a lot of fun being the Head TA for the Algorithms course for a year.
           </p>
@@ -283,7 +283,7 @@
 
   @media (max-width: 600px) {
     .content {
-      max-width: 98vw;
+      max-width: 100vw;
       min-width: 0;
       padding: 1.2rem 0.5rem 2rem 0.5rem;
     }
