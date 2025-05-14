@@ -283,7 +283,7 @@
 
   @media (max-width: 600px) {
     .content {
-      max-width: 75vw;
+      max-width: 98vw;
       min-width: 0;
       padding: 1.2rem 0.5rem 2rem 0.5rem;
     }
