@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=GFS+Didot&display=swap');
+
+
+:root {
+  --background-color: #fbf3ee;
+  --text-color: #111111;
+  --font-family-sans: "GFS Didot", 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  --font-family-serif: "Baskervville", 'Hoefler Text', Garamond, 'Times New Roman', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: var(--background-color);
+  line-height: 1.5;
+  font-family: var(--font-family-sans);
+  font-weight: 400;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  position: fixed;
+} 
