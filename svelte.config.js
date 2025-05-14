@@ -18,7 +18,8 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: '' // Empty for user pages (username.github.io)
+			base: '',
+			relative: false
 		}
 	}
 };
