@@ -95,7 +95,6 @@
     if (!ctx || !canvas) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Set global alpha for the canvas content
     ctx.globalAlpha = canvasOpacity;
     
     particles.forEach((p) => p.update());
@@ -210,8 +209,9 @@
               <a class="link" href="https://zietek.dev/" target="_blank" rel="noopener noreferrer">Jacob Zietek</a>, 
               <a class="link" href="https://jinen.setpal.net/" target="_blank" rel="noopener noreferrer">Jinen Setpal</a>, 
               <a class="link" href="https://wade.dev/" target="_blank" rel="noopener noreferrer">Nicholas Wade</a>, 
-              <a class="link" href="https://mikail-khan.com/" target="_blank" rel="noopener noreferrer">Mikail Khan</a>, <br>
-              <a class="link" href="https://sagarpatil.me/" target="_blank" rel="noopener noreferrer">Sagar Patil</a>,  and 
+              <a class="link" href="https://mikail-khan.com/" target="_blank" rel="noopener noreferrer">Mikail Khan</a>,
+              <a class="link" href="https://sagarpatil.me/" target="_blank" rel="noopener noreferrer">Sagar Patil</a>,  <br>
+              <a class="link" href="https://sohamjog.com/" target="_blank" rel="noopener noreferrer">Soham Jog</a>, and
               <a class="link" href="https://sarthakmangla.com/" target="_blank" rel="noopener noreferrer">Sarthak Mangla</a>. 
           </p>
         </div>
@@ -263,7 +263,7 @@
   }
 
   .content {
-    max-width: 1000px;
+    max-width: 1100px;
     min-height: 500px;
     text-align: center;
     backdrop-filter: blur(5px);
@@ -283,7 +283,7 @@
 
   @media (max-width: 600px) {
     .content {
-      max-width: 100vw;
+      max-width: 108vw;
       min-width: 0;
       padding: 1.2rem 0.5rem 2rem 0.5rem;
     }
