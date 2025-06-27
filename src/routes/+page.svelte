@@ -160,12 +160,13 @@
         <div class="about">
           <p>
             I study Computer Science at <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue</a> 
-            with some Math and Philosophy. I like ML, Math and Software.
+            with some Math and Philosophy. I like ML, Math and Software. I currently work at 
+            <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams.
           </p>
           <br>
 
           <p>
-              I have worked at 
+              I have worked at
               <a href="https://coherehealth.com/tech-blog/enhancing-machine-learning-infrastructure/" target="_blank" rel="noopener noreferrer">Cohere Health</a> 
               building workflows for fax intake on the software team. I trained NER Models and LLM agents on the ML team. 
               Lately, I have been building <a href="https://tensara.org" target="_blank" rel="noopener noreferrer">Tensara</a>, 
