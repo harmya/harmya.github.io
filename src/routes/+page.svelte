@@ -159,9 +159,10 @@
 
         <div class="about">
           <p>
-            I study Computer Science at <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue</a> 
-            with some Math and Philosophy. I like ML, Math and Software. I currently work at 
-            <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams.
+            I like ML, Math and Systems. I currently work at 
+            <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams. I studied Computer Science at 
+            <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue</a> 
+            with some Math and Philosophy. 
           </p>
           <br>
 
