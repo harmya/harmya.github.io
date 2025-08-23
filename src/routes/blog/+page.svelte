@@ -1,40 +1,21 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-  import ParticleCanvas from '$lib/ParticleCanvas.svelte';
-  
-  // Sample blog posts data
-  const posts = [
-    {
-      id: 1,
-      title: "Building GPU Programming Platforms",
-      subtitle: "Lessons learned from creating Tensara and working with distributed systems",
-      date: "2024-01-15"
-    },
-    {
-      id: 2,
-      title: "Machine Learning in Healthcare",
-      subtitle: "Training NER models and LLM agents for medical document processing",
-      date: "2023-12-08"
-    },
-    {
-      id: 3,
-      title: "Teaching Algorithms at Scale",
-      subtitle: "Reflections from being Head TA for CS381 at Purdue University",
-      date: "2023-11-22"
-    },
-    {
-      id: 4,
-      title: "XAI for Injury Classification",
-      subtitle: "Research on explainable AI models for medical injury prediction",
-      date: "2023-10-10"
-    },
-    {
-      id: 5,
-      title: "Human-Computer Interaction",
-      subtitle: "Designing better recommender systems through user research",
-      date: "2023-09-15"
+  import { fade } from "svelte/transition";
+  import ParticleCanvas from "$lib/ParticleCanvas.svelte";
+  import { getBlogPosts, type BlogPost } from "$lib/blog.js";
+  import { onMount } from "svelte";
+
+  let posts: BlogPost[] = [];
+  let loading = true;
+
+  onMount(async () => {
+    try {
+      posts = await getBlogPosts();
+    } catch (error) {
+      console.error("Failed to load blog posts:", error);
+    } finally {
+      loading = false;
     }
-  ];
+  });
 </script>
 
 <svelte:head>
@@ -43,25 +24,34 @@
 </svelte:head>
 
 <div class="container" in:fade={{ duration: 100 }}>
-  <ParticleCanvas />
-  
   <main>
     <div class="content" transition:fade={{ duration: 200 }}>
       <h1>Blog</h1>
-      
-      <div class="posts">
-        {#each posts as post}
-          <article class="post" transition:fade={{ duration: 200, delay: 100 }}>
-            <h2 class="post-title">{post.title}</h2>
-            <p class="post-subtitle">{post.subtitle}</p>
-            <time class="post-date">{new Date(post.date).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}</time>
-          </article>
-        {/each}
-      </div>
+
+      {#if loading}
+        <div class="loading">Loading posts...</div>
+      {:else}
+        <div class="posts">
+          {#each posts as post}
+            <article
+              class="post"
+              transition:fade={{ duration: 200, delay: 100 }}
+            >
+              <a href="/blog/{post.slug}" class="post-link">
+                <h2 class="post-title">{post.title}</h2>
+                <p class="post-subtitle">{post.subtitle}</p>
+                <time class="post-date"
+                  >{new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}</time
+                >
+              </a>
+            </article>
+          {/each}
+        </div>
+      {/if}
     </div>
   </main>
 </div>
@@ -88,7 +78,8 @@
   }
 
   .content {
-    max-width: 800px;
+    max-width: 75vw;
+    min-height: 75vh;
     text-align: center;
     backdrop-filter: blur(5px);
     background: #fbf3ee;
@@ -130,7 +121,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: left;
+    text-align: center;
   }
 
   .post {
@@ -171,11 +162,29 @@
     opacity: 0.7;
   }
 
+  .loading {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.7;
+  }
+
+  .post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .post-link:hover .post-title {
+    color: #2c4f2e;
+  }
+
   @media (max-width: 600px) {
     .post-title {
       font-size: 1.25rem;
     }
-    
+
     .post-subtitle {
       font-size: 0.9rem;
     }
