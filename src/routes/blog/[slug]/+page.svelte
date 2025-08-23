@@ -1,28 +1,10 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
+  import type { BlogPost } from "$lib/blog.js";
 
-  import { getBlogPost, type BlogPost } from "$lib/blog.js";
-  import { onMount } from "svelte";
-  import { page } from "$app/stores";
-  import ParticleCanvas from "$lib/ParticleCanvas.svelte";
+  export let data: { post: BlogPost };
 
-  let post: BlogPost | null = null;
-  let loading = true;
-  let notFound = false;
-  onMount(async () => {
-    try {
-      const slug = $page.params.slug;
-      post = await getBlogPost(slug);
-      if (!post) {
-        notFound = true;
-      }
-    } catch (error) {
-      console.error("Failed to load blog post:", error);
-      notFound = true;
-    } finally {
-      loading = false;
-    }
-  });
+  $: post = data.post;
 </script>
 
 <svelte:head>
@@ -38,34 +20,24 @@
 <div class="container" in:fade={{ duration: 100 }}>
   <main>
     <div class="content" transition:fade={{ duration: 200 }}>
-      {#if loading}
-        <div class="loading">Loading post...</div>
-      {:else if notFound}
-        <div class="not-found">
-          <h1>Post Not Found</h1>
-          <p>The blog post you're looking for doesn't exist.</p>
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">{post.title}</h1>
+          <p class="post-subtitle">{post.subtitle}</p>
+          <time class="post-date">
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
           <a href="/blog" class="back-link">← Back to Blog</a>
-        </div>
-      {:else if post}
-        <article class="post">
-          <header class="post-header">
-            <h1 class="post-title">{post.title}</h1>
-            <p class="post-subtitle">{post.subtitle}</p>
-            <time class="post-date">
-              {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-            <a href="/blog" class="back-link">← Back to Blog</a>
-          </header>
+        </header>
 
-          <div class="post-content">
-            {@html post.html}
-          </div>
-        </article>
-      {/if}
+        <div class="post-content">
+          {@html post.html}
+        </div>
+      </article>
     </div>
   </main>
 </div>

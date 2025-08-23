@@ -40,7 +40,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   const posts: BlogPost[] = [];
   
   // Import all markdown files from the posts directory
-  const postModules = import.meta.glob('/src/posts/*.md', { as: 'raw' });
+  const postModules = import.meta.glob('/src/posts/*.md', { query: '?raw', import: 'default' });
   
   for (const [path, loader] of Object.entries(postModules)) {
     const content = await loader() as string;
