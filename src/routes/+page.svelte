@@ -31,24 +31,24 @@
 
         <div class="about">
           <p>
-            I like ML, Math and Systems. I currently work at 
-            <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams. I studied Computer Science at 
-            <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue</a> 
-            with some Math and Philosophy. 
+            I like ML, Math and Systems. I currently work at <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Amazon</a> on their identity infrastructure. If you ever logged in from any device onto any amazon service from anywhere, that's us :)
           </p>
           <br>
 
           <p>
-              I have worked at
-              <a href="https://coherehealth.com/tech-blog/enhancing-machine-learning-infrastructure/" target="_blank" rel="noopener noreferrer">Cohere Health</a> 
-              building workflows for fax intake on the software team. I trained NER Models and LLM agents on the ML team. 
+              Previously, I worked at
+              <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams where I worked on some <a href="https://modal.com/gpu-glossary/perf" target="_blank" rel="noopener noreferrer">GPU stuff</a>. I worked at
+              <a href="https://coherehealth.com/tech-blog/enhancing-machine-learning-infrastructure/" target="_blank" rel="noopener noreferrer">Cohere Health</a> where I built
+              workflows for fax intake on the software team and trained NER Models and LLM agents on the ML team. 
               Lately, I have been building <a href="https://tensara.org" target="_blank" rel="noopener noreferrer">Tensara</a>, 
               a GPU programming platform. Get in touch if you have feedback!
           </p>
           <br>
 
           <p>
-            At university, I was also involved in research with 
+            I studied Computer Science at 
+            <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue</a> 
+            with some Math and Philosophy. I was also involved in research with 
             <a href="https://web.ics.purdue.edu/~gnanda/RGroup.html" target="_blank" rel="noopener noreferrer">Dr Gaurav Nanda</a> 
             working on ML Models (and some XAI) for injury classification and 
             <a href="https://tl-tianyi-li.github.io/" target="_blank" rel="noopener noreferrer   ">Dr Tianyi Li</a> 
