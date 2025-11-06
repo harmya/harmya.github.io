@@ -1,8 +1,8 @@
 ---
-title: "Why am I writing a blog?"
+title: "Hello"
 subtitle: ""
 date: "2025-08-23"
 slug: "why"
 ---
 
-I think I suck at writing. Especially writing about technical stuff. This is a way for me get reps in for writing.
+Hello, I am testing
