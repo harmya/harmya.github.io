@@ -24,25 +24,22 @@
 <div class="container" in:fade={{ duration: 100 }}>
   <ParticleCanvas />
 
-  <main>
+<main>
     {#if visible}
       <div class="content" transition:fade={{ duration: 200 }}>
         <h1>Harmya Bhatt</h1>
 
         <div class="about">
           <p>
-            I like ML, Math and Systems. I currently work at <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Amazon</a> on their identity infrastructure. If you ever logged in from any device onto any amazon service from anywhere, that's us :)
+            I like ML, Math and Systems.
           </p>
           <br>
 
-          <p>
-              Previously, I worked at
-              <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer">Modal</a>, a platform for AI and data teams where I worked on some <a href="https://modal.com/gpu-glossary/perf" target="_blank" rel="noopener noreferrer">GPU stuff</a>. I worked at
-              <a href="https://coherehealth.com/tech-blog/enhancing-machine-learning-infrastructure/" target="_blank" rel="noopener noreferrer">Cohere Health</a> where I built
+          <p>Previously, I worked at <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Amazon</a> on the authentication gateway team. If you ever logged in from any device onto any amazon service from anywhere, that was us.
+              I worked at <a href="https://www.modal.com/" target="_blank" rel="noopener noreferrer" class="svelte-1uha8ag">Modal</a>, a platform for AI and data teams where I worked on some <a href="https://modal.com/gpu-glossary/perf" target="_blank" rel="noopener noreferrer" class="svelte-1uha8ag">GPU stuff</a>. I worked at <a href="https://coherehealth.com/tech-blog/enhancing-machine-learning-infrastructure/" target="_blank" rel="noopener noreferrer" class="svelte-1uha8ag">Cohere Health</a> where I built
               workflows for fax intake on the software team and trained NER Models and LLM agents on the ML team. 
-              Lately, I have been building <a href="https://tensara.org" target="_blank" rel="noopener noreferrer">Tensara</a>, 
-              a GPU programming platform. Get in touch if you have feedback!
-          </p>
+              Lately, I have been building <a href="https://tensara.org" target="_blank" rel="noopener noreferrer" class="svelte-1uha8ag">Tensara</a>, 
+              a GPU programming platform. Get in touch if you have feedback!</p>
           <br>
 
           <p>
@@ -58,7 +55,7 @@
           <br>
 
           <p>
-              I love tinkering and building projects, like: 
+              I love tinkering and learning new things. Some stuff I have done: 
               <a href="https://github.com/tensara/tensara-cli" target="_blank" rel="noopener noreferrer">CLI for Tensara</a>, 
               <a href="https://github.com/harmya/elden" target="_blank" rel="noopener noreferrer"> Compiler </a>, 
               <a href="https://github.com/harmya/tomography" target="_blank" rel="noopener noreferrer"> Computed Tomography </a>,
@@ -68,25 +65,8 @@
           <br>
 
           <p>
-              Apart from all this, I try to play the <a href="https://www.youtube.com/@harmyab" target="_blank" rel="noopener noreferrer">guitar</a>, 
-              I love playing soccer, and reading random wikipedia articles.
+              Apart from all this, I try to play the guitar, I love playing soccer and reading random wikipedia articles.
               
-          </p>
-          <br>
-
-          <p>
-              Some amazing people I know: <br>
-              <a class="link" href="https://abuynits.github.io/" target="_blank" rel="noopener noreferrer">Alexiy Buynitsky</a>, 
-              <a class="link" href="https://arefmalek.com/" target="_blank" rel="noopener noreferrer">Aref Malek</a>, 
-              <a class="link" href="https://bhavesh.dev/" target="_blank" rel="noopener noreferrer">Bhavesh Pareek</a>, 
-              <a class="link" href="https://coleroberts.dev/index" target="_blank" rel="noopener noreferrer">Cole Roberts</a>, 
-              <a class="link" href="https://zietek.dev/" target="_blank" rel="noopener noreferrer">Jacob Zietek</a>, 
-              <a class="link" href="https://jinen.setpal.net/" target="_blank" rel="noopener noreferrer">Jinen Setpal</a>, 
-              <a class="link" href="https://wade.dev/" target="_blank" rel="noopener noreferrer">Nicholas Wade</a>, 
-              <a class="link" href="https://mikail-khan.com/" target="_blank" rel="noopener noreferrer">Mikail Khan</a>,
-              <a class="link" href="https://sagarpatil.me/" target="_blank" rel="noopener noreferrer">Sagar Patil</a>,  <br>
-              <a class="link" href="https://sohamjog.com/" target="_blank" rel="noopener noreferrer">Soham Jog</a>, and
-              <a class="link" href="https://sarthakmangla.com/" target="_blank" rel="noopener noreferrer">Sarthak Mangla</a>. 
           </p>
         </div>
 
@@ -231,10 +211,4 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-.link {
-  color: #111111;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-}
 </style>
