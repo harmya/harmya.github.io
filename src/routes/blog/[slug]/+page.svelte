@@ -116,7 +116,7 @@
   .post-title {
     font-family: var(--font-family-serif);
     color: #669869;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -132,7 +132,7 @@
 
   .post-date {
     color: #669869;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     opacity: 0.7;
     display: block;
@@ -142,7 +142,7 @@
   .back-link {
     color: #417645;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: color 0.2s ease;
   }
 
@@ -159,7 +159,7 @@
   .post-content :global(h1) {
     font-family: var(--font-family-serif);
     color: #417645;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 2rem 0 1rem 0;
     line-height: 1.3;
   }
@@ -167,7 +167,7 @@
   .post-content :global(h2) {
     font-family: var(--font-family-serif);
     color: #417645;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 1.5rem 0 0.75rem 0;
     line-height: 1.3;
   }
@@ -175,12 +175,13 @@
   .post-content :global(h3) {
     font-family: var(--font-family-serif);
     color: #417645;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin: 1.25rem 0 0.5rem 0;
     line-height: 1.3;
   }
 
   .post-content :global(p) {
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
 
@@ -225,19 +226,19 @@
 
   @media (max-width: 600px) {
     .post-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .post-subtitle {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .post-content :global(h1) {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
 
     .post-content :global(h2) {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
   }
 </style>

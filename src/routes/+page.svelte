@@ -55,7 +55,7 @@
           <br>
 
           <p>
-              I love tinkering and learning new things. Some stuff I have done: 
+              I love tinkering and learning. Some stuff I have done: 
               <a href="https://github.com/tensara/tensara-cli" target="_blank" rel="noopener noreferrer">CLI for Tensara</a>, 
               <a href="https://github.com/harmya/elden" target="_blank" rel="noopener noreferrer"> Compiler </a>, 
               <a href="https://github.com/harmya/tomography" target="_blank" rel="noopener noreferrer"> Computed Tomography </a>,
@@ -73,6 +73,9 @@
         <div class="social">
           <a href="/blog">
             <span class="icon">Blog</span>
+          </a>
+          <a href="/friends">
+            <span class="icon">Friends</span>
           </a>
           <a href="https://github.com/harmya" target="_blank" rel="noopener noreferrer">
             <span class="icon">GitHub</span>
@@ -110,8 +113,8 @@
   }
 
   .content {
-    max-width: 1100px;
-    min-height: 500px;
+    max-width: 1300px;
+    min-height: 700px;
     text-align: center;
     backdrop-filter: blur(5px);
     background: #fbf3ee;
@@ -143,7 +146,7 @@
   h1 {
     font-family: var(--font-family-serif);
     color: #669869;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 800;
     padding-bottom: 2rem;
@@ -159,6 +162,7 @@
   .social {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
   }
 
@@ -167,6 +171,7 @@
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 1.2rem;
   }
 
   .social a:hover {
@@ -209,6 +214,10 @@ a:focus-visible {
   outline: 2px solid #2c4f2e;
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 </style>

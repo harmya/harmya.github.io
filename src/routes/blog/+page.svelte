@@ -26,6 +26,7 @@
 <div class="container" in:fade={{ duration: 100 }}>
   <main>
     <div class="content" transition:fade={{ duration: 200 }}>
+      <a href="/" class="back-link">← Back</a>
       <h1>Blog</h1>
 
       {#if loading}
@@ -107,11 +108,24 @@
     }
   }
 
+  .back-link {
+    align-self: flex-start;
+    color: #417645;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: #2c4f2e;
+  }
+
   /* Typography */
   h1 {
     font-family: var(--font-family-serif);
     color: #669869;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     font-weight: 800;
   }
@@ -141,7 +155,7 @@
   .post-title {
     font-family: var(--font-family-serif);
     color: #417645;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.3;
@@ -149,7 +163,7 @@
 
   .post-subtitle {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 0.75rem;
     opacity: 0.8;
@@ -157,14 +171,14 @@
 
   .post-date {
     color: #669869;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     opacity: 0.7;
   }
 
   .loading {
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
     padding: 2rem;
     opacity: 0.7;
